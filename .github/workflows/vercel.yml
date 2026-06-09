@@ -1,0 +1,59 @@
+name: Vercel Deploy
+
+on:
+  push:
+    branches:
+      - '**'
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Vercel secrets
+        run: |
+          missing=()
+          [ -z "$VERCEL_TOKEN" ] && missing+=("VERCEL_TOKEN")
+          [ -z "$VERCEL_ORG_ID" ] && missing+=("VERCEL_ORG_ID")
+          [ -z "$VERCEL_PROJECT_ID" ] && missing+=("VERCEL_PROJECT_ID")
+          if [ "${#missing[@]}" -gt 0 ]; then
+            echo "::error::Missing GitHub secrets: ${missing[*]}. Add them under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Set deploy environment
+        id: env
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "environment=production" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
+          else
+            echo "environment=preview" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=${{ steps.env.outputs.environment }}
+
+      - name: Build Project Artifacts
+        run: vercel build ${{ steps.env.outputs.prod_flag }}
+
+      - name: Deploy to Vercel
+        run: vercel deploy --prebuilt ${{ steps.env.outputs.prod_flag }}

@@ -78,16 +78,43 @@ Open http://localhost:5173 — Vite proxies `/api` to the Python backend.
 
 ## Deploy to Vercel
 
+### Automatic deploys (every push)
+
+Pushes trigger [`.github/workflows/vercel.yml`](.github/workflows/vercel.yml):
+
+- `main` → production
+- any other branch → preview
+
+**One-time setup**
+
 1. Install the [Vercel CLI](https://vercel.com/docs/cli) and log in.
-2. From the project root:
+2. From the project root, link the repo to a Vercel project:
+
+```bash
+vercel link
+```
+
+3. Create a [Vercel access token](https://vercel.com/account/settings/tokens).
+4. Add these GitHub repository secrets (Settings → Secrets and variables → Actions):
+
+| Secret | Where to find it |
+|--------|------------------|
+| `VERCEL_TOKEN` | Vercel account → Settings → Tokens |
+| `VERCEL_ORG_ID` | `.vercel/project.json` after `vercel link`, or Project → Settings → General |
+| `VERCEL_PROJECT_ID` | same as above |
+
+5. Push to GitHub. Each commit deploys automatically.
+
+### Manual deploy
 
 ```bash
 vercel
-# production deploy
 vercel --prod
 ```
 
-3. Optional: set `CRON_SECRET` in the Vercel dashboard (Project → Settings → Environment Variables) to secure the cron endpoint.
+### Environment variables
+
+Optional: set `CRON_SECRET` in the Vercel dashboard (Project → Settings → Environment Variables) to secure the cron endpoint.
 
 The cron job runs daily at 06:00 UTC (`0 6 * * *`) and refreshes data for 20 countries.
 

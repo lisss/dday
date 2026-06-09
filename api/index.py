@@ -15,6 +15,7 @@ app = FastAPI(
     title="Death Predictor API",
     description="Country statistics and statistical death date estimation",
     version="1.0.0",
+    root_path="/api" if os.environ.get("VERCEL") else "",
 )
 
 app.add_middleware(

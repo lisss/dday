@@ -80,30 +80,17 @@ Open http://localhost:5173 — Vite proxies `/api` to the Python backend.
 
 ### Automatic deploys (every push)
 
-Pushes trigger [`.github/workflows/vercel.yml`](.github/workflows/vercel.yml):
-
-- `main` → production
-- any other branch → preview
+Use [Vercel's GitHub integration](https://vercel.com/docs/git/vercel-for-github) — no GitHub Actions secrets required.
 
 **One-time setup**
 
-1. Install the [Vercel CLI](https://vercel.com/docs/cli) and log in.
-2. From the project root, link the repo to a Vercel project:
+1. Go to [vercel.com/new](https://vercel.com/new) and import `lisss/dday` from GitHub.
+2. Leave build settings as-is (they come from `vercel.json`).
+3. Deploy. Vercel will deploy on every push:
+   - `main` → production
+   - other branches → preview
 
-```bash
-vercel link
-```
-
-3. Create a [Vercel access token](https://vercel.com/account/settings/tokens).
-4. Add these GitHub repository secrets (Settings → Secrets and variables → Actions):
-
-| Secret | Where to find it |
-|--------|------------------|
-| `VERCEL_TOKEN` | Vercel account → Settings → Tokens |
-| `VERCEL_ORG_ID` | `.vercel/project.json` after `vercel link`, or Project → Settings → General |
-| `VERCEL_PROJECT_ID` | same as above |
-
-5. Push to GitHub. Each commit deploys automatically.
+If the project already exists on Vercel, connect the repo under **Project → Settings → Git**.
 
 ### Manual deploy
 

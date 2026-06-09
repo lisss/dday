@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.local
+node_modules/
+frontend/dist/
+frontend/node_modules/
+.vercel
+data/cache.json
+*.log
+.DS_Store

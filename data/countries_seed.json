@@ -1,0 +1,52 @@
+{
+  "updated_at": "2026-01-01T00:00:00+00:00",
+  "countries": {
+    "US": {
+      "code": "US",
+      "name": "United States",
+      "region": "Americas",
+      "subregion": "North America",
+      "capital": "Washington, D.C.",
+      "population": 331893745,
+      "languages": ["English"],
+      "life_expectancy": 77.3,
+      "gdp_per_capita_usd": 76398.0,
+      "school_enrollment_secondary_pct": 95.2,
+      "ethnicity": [
+        {"group": "White", "share": 59.3},
+        {"group": "Hispanic/Latino", "share": 19.1},
+        {"group": "Black/African American", "share": 13.6},
+        {"group": "Asian", "share": 6.3},
+        {"group": "Other/Mixed", "share": 1.7}
+      ],
+      "weather_description": "Seed data — refresh via cron"
+    },
+    "GB": {
+      "code": "GB",
+      "name": "United Kingdom",
+      "region": "Europe",
+      "life_expectancy": 80.7,
+      "gdp_per_capita_usd": 45867.0,
+      "school_enrollment_secondary_pct": 98.0,
+      "ethnicity": [
+        {"group": "White", "share": 81.7},
+        {"group": "Asian", "share": 9.3},
+        {"group": "Black", "share": 4.0}
+      ],
+      "weather_description": "Seed data — refresh via cron"
+    },
+    "JP": {
+      "code": "JP",
+      "name": "Japan",
+      "region": "Asia",
+      "life_expectancy": 84.5,
+      "gdp_per_capita_usd": 33815.0,
+      "school_enrollment_secondary_pct": 101.0,
+      "ethnicity": [
+        {"group": "Japanese", "share": 97.5},
+        {"group": "Other", "share": 2.5}
+      ],
+      "weather_description": "Seed data — refresh via cron"
+    }
+  }
+}

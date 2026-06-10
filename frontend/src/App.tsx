@@ -50,6 +50,19 @@ function pad2(n: number): string {
   return String(n).padStart(2, "0");
 }
 
+function parseLocalDate(iso: string): Date {
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(year, month - 1, day, 0, 0, 0, 0);
+}
+
+function splitRemainingSeconds(totalSeconds: number) {
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return { days, hours, minutes, seconds };
+}
+
 function useCountdown(targetDateIso: string | null) {
   const [now, setNow] = useState(() => Date.now());
 
@@ -61,14 +74,9 @@ function useCountdown(targetDateIso: string | null) {
 
   return useMemo(() => {
     if (!targetDateIso) return null;
-    const target = new Date(targetDateIso);
-    target.setHours(0, 0, 0, 0);
+    const target = parseLocalDate(targetDateIso);
     const totalSeconds = Math.max(0, Math.floor((target.getTime() - now) / 1000));
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-    return { days, hours, minutes, seconds, totalSeconds };
+    return { ...splitRemainingSeconds(totalSeconds), totalSeconds };
   }, [targetDateIso, now]);
 }
 
@@ -78,11 +86,12 @@ function Countdown({ targetDate }: { targetDate: string }) {
 
   return (
     <div className="countdown">
-      <div className="countdown-days">
-        <span className="countdown-value">{left.days.toLocaleString()}</span>
-        <span className="countdown-label">days left</span>
-      </div>
       <div className="countdown-clock" aria-live="polite">
+        <span className="countdown-clock-segment countdown-clock-segment--days">
+          <span className="countdown-digit">{left.days.toLocaleString()}</span>
+          <span className="countdown-unit">days</span>
+        </span>
+        <span className="countdown-sep">:</span>
         <span className="countdown-clock-segment">
           <span className="countdown-digit">{pad2(left.hours)}</span>
           <span className="countdown-unit">hrs</span>

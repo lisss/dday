@@ -169,31 +169,11 @@ select:focus {
   border-radius: 0.85rem;
 }
 
-.countdown-days {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  margin-bottom: 0.85rem;
-}
-
-.countdown-value {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(2.5rem, 7vw, 3.5rem);
-  line-height: 1;
-  color: var(--accent);
-}
-
-.countdown-label {
-  font-size: 1rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
 .countdown-clock {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.35rem;
   font-family: "DM Mono", "SF Mono", ui-monospace, monospace;
   margin-bottom: 0.5rem;
@@ -204,6 +184,16 @@ select:focus {
   flex-direction: column;
   align-items: center;
   min-width: 3.5rem;
+}
+
+.countdown-clock-segment--days {
+  min-width: 5rem;
+}
+
+.countdown-clock-segment--days .countdown-digit {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--accent);
 }
 
 .countdown-digit {

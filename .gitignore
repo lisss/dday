@@ -5,6 +5,7 @@ __pycache__/
 *.egg-info/
 .env
 .env.local
+scripts/auth.json
 node_modules/
 frontend/dist/
 frontend/node_modules/

@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 REPO="${GITHUB_REPO:-lisss/dday}"
 PROJECT_NAME="${VERCEL_PROJECT_NAME:-dday}"
-VERCEL_AUTH_FILE="${HOME}/Library/Application Support/com.vercel.cli/auth.json"
+VERCEL_AUTH_FILE="auth.json"
 
 echo "Setting up Vercel CI for $REPO"
 

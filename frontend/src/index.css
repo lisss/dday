@@ -161,6 +161,82 @@ select:focus {
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
+.countdown {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.1rem;
+  background: #0d1017;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+  border-radius: 0.85rem;
+}
+
+.countdown-days {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.countdown-value {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  line-height: 1;
+  color: var(--accent);
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.countdown-clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-family: "DM Mono", "SF Mono", ui-monospace, monospace;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-clock-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.5rem;
+}
+
+.countdown-digit {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.countdown-sep {
+  font-size: 1.75rem;
+  color: var(--accent-dim);
+  margin-bottom: 1rem;
+}
+
+.countdown-seconds {
+  margin: 0;
+  text-align: center;
+  font-family: "DM Mono", "SF Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .result-date {
   font-family: "Instrument Serif", Georgia, serif;
   font-size: clamp(2rem, 5vw, 3rem);

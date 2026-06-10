@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import {
   CountryDetail,
   CountrySummary,
@@ -44,6 +44,65 @@ function formatMoney(value?: number): string {
     currency: "USD",
     maximumFractionDigits: 0,
   }).format(value);
+}
+
+function pad2(n: number): string {
+  return String(n).padStart(2, "0");
+}
+
+function useCountdown(targetDateIso: string | null) {
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    if (!targetDateIso) return;
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(id);
+  }, [targetDateIso]);
+
+  return useMemo(() => {
+    if (!targetDateIso) return null;
+    const target = new Date(targetDateIso);
+    target.setHours(0, 0, 0, 0);
+    const totalSeconds = Math.max(0, Math.floor((target.getTime() - now) / 1000));
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return { days, hours, minutes, seconds, totalSeconds };
+  }, [targetDateIso, now]);
+}
+
+function Countdown({ targetDate }: { targetDate: string }) {
+  const left = useCountdown(targetDate);
+  if (!left) return null;
+
+  return (
+    <div className="countdown">
+      <div className="countdown-days">
+        <span className="countdown-value">{left.days.toLocaleString()}</span>
+        <span className="countdown-label">days left</span>
+      </div>
+      <div className="countdown-clock" aria-live="polite">
+        <span className="countdown-clock-segment">
+          <span className="countdown-digit">{pad2(left.hours)}</span>
+          <span className="countdown-unit">hrs</span>
+        </span>
+        <span className="countdown-sep">:</span>
+        <span className="countdown-clock-segment">
+          <span className="countdown-digit">{pad2(left.minutes)}</span>
+          <span className="countdown-unit">min</span>
+        </span>
+        <span className="countdown-sep">:</span>
+        <span className="countdown-clock-segment">
+          <span className="countdown-digit">{pad2(left.seconds)}</span>
+          <span className="countdown-unit">sec</span>
+        </span>
+      </div>
+      <p className="countdown-seconds">
+        {left.totalSeconds.toLocaleString()} seconds remaining
+      </p>
+    </div>
+  );
 }
 
 export default function App() {
@@ -258,6 +317,7 @@ export default function App() {
         {result && (
           <section className="panel result-panel">
             <h2>Your estimate</h2>
+            <Countdown targetDate={result.predicted_death_date} />
             <p className="result-date">{formatDate(result.predicted_death_date)}</p>
             <p className="result-range">
               Likely range: {formatDate(result.earliest_death_date)} —{" "}
@@ -293,7 +353,7 @@ export default function App() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="stat">
       <span className="stat-label">{label}</span>

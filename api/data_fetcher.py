@@ -177,6 +177,12 @@ async def _fetch_weather(
         return None
 
 
+def _round_years(value: float | int | None) -> int | None:
+    if value is None:
+        return None
+    return round(float(value))
+
+
 def _weather_label(code: int | None) -> str:
     labels = {
         0: "Clear sky",
@@ -238,7 +244,7 @@ async def fetch_country_data(country_code: str) -> dict[str, Any]:
         "capital": meta.get("capital") or seed.get("capital") or (rest.get("capital") or [None])[0],
         "population": rest.get("population") or seed.get("population"),
         "languages": list((rest.get("languages") or {}).values()) or seed.get("languages", []),
-        "life_expectancy": life_exp or seed.get("life_expectancy"),
+        "life_expectancy": _round_years(life_exp if life_exp is not None else seed.get("life_expectancy")),
         "gdp_per_capita_usd": gdp if gdp is not None else seed.get("gdp_per_capita_usd"),
         "school_enrollment_secondary_pct": edu if edu is not None else seed.get(
             "school_enrollment_secondary_pct"

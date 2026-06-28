@@ -51,7 +51,7 @@ class PredictRequest(BaseModel):
     income_level: IncomeLevel = "average"
     smoking: SmokingStatus = "never"
     alcohol: AlcoholLevel = "none"
-    reading_hours_per_week: float = Field(ge=0, le=60, default=0)
+    reading_hours_per_month: float = Field(ge=0, le=250, default=0)
     activities: list[ActivityEntry] = Field(default_factory=list)
     ethnicity_group: str | None = None
 
@@ -120,8 +120,8 @@ MAX_ACTIVITY_BENEFIT = 5.5
 
 def _base_life_expectancy(country_code: str) -> tuple[float, str]:
     info = storage.get_country(country_code)
-    if info and info.get("life_expectancy"):
-        return float(info["life_expectancy"]), info.get("name", country_code)
+    if info and info.get("life_expectancy") is not None:
+        return round(float(info["life_expectancy"])), info.get("name", country_code)
     return GLOBAL_LIFE_EXPECTANCY, country_code
 
 
@@ -133,10 +133,11 @@ def _activity_hours_adjustment(hours: float, benefit_per_hour: float) -> float:
     return benefit_per_hour * capped * max(diminishing, 0.35)
 
 
-def _reading_adjustment(hours: float) -> float:
-    if hours <= 0:
+def _reading_adjustment(hours_per_month: float) -> float:
+    if hours_per_month <= 0:
         return 0.0
-    return min(MAX_READING_BENEFIT, hours * 0.22)
+    hours_per_week = hours_per_month / 4.345
+    return min(MAX_READING_BENEFIT, hours_per_week * 0.22)
 
 
 def _activity_factors(activities: list[ActivityEntry]) -> dict[str, float]:
@@ -170,7 +171,7 @@ def predict_death(req: PredictRequest) -> PredictResponse:
         "income": INCOME_ADJUSTMENT[req.income_level],
         "smoking": SMOKING_ADJUSTMENT[req.smoking],
         "alcohol": ALCOHOL_ADJUSTMENT[req.alcohol],
-        "reading": round(_reading_adjustment(req.reading_hours_per_week), 2),
+        "reading": round(_reading_adjustment(req.reading_hours_per_month), 2),
     }
     factors.update(_activity_factors(req.activities))
 
@@ -189,8 +190,8 @@ def predict_death(req: PredictRequest) -> PredictResponse:
         earliest_death_date=earliest,
         latest_death_date=latest,
         remaining_years=round(remaining, 1),
-        life_expectancy_at_birth=round(base_exp, 1),
-        adjusted_life_expectancy=round(adjusted_expectancy, 1),
+        life_expectancy_at_birth=round(base_exp),
+        adjusted_life_expectancy=round(adjusted_expectancy),
         country=country_name,
         factors_applied={k: round(v, 1) for k, v in factors.items()},
         disclaimer=(

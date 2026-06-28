@@ -21,7 +21,7 @@ type FormState = {
   incomeLevel: PredictRequest["income_level"];
   smoking: PredictRequest["smoking"];
   alcohol: PredictRequest["alcohol"];
-  readingHoursPerWeek: number;
+  readingHoursPerMonth: number;
   activityHours: Record<ActivityType, number>;
 };
 
@@ -45,7 +45,7 @@ const initialForm: FormState = {
   incomeLevel: "average",
   smoking: "never",
   alcohol: "none",
-  readingHoursPerWeek: 3,
+  readingHoursPerMonth: 12,
   activityHours: EMPTY_ACTIVITY_HOURS(),
 };
 
@@ -208,7 +208,7 @@ export default function App() {
         income_level: form.incomeLevel,
         smoking: form.smoking,
         alcohol: form.alcohol,
-        reading_hours_per_week: form.readingHoursPerWeek,
+        reading_hours_per_month: form.readingHoursPerMonth,
         activities,
       };
       const prediction = await predictDeath(payload);
@@ -361,14 +361,14 @@ export default function App() {
               <input
                 type="number"
                 min={0}
-                max={60}
-                step={0.5}
-                value={form.readingHoursPerWeek}
+                max={250}
+                step={1}
+                value={form.readingHoursPerMonth}
                 onChange={(e) =>
-                  update("readingHoursPerWeek", Number(e.target.value) || 0)
+                  update("readingHoursPerMonth", Number(e.target.value) || 0)
                 }
               />
-              <span className="field-hint">hours per week</span>
+              <span className="field-hint">hours per month</span>
             </label>
 
             <fieldset className="activity-fieldset wide">

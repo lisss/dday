@@ -53,7 +53,11 @@ def list_countries() -> list[dict[str, Any]]:
             {
                 "code": code,
                 "name": info.get("name", code),
-                "life_expectancy": info.get("life_expectancy"),
+                "life_expectancy": (
+                    round(info["life_expectancy"])
+                    if info.get("life_expectancy") is not None
+                    else None
+                ),
                 "region": info.get("region"),
             }
             for code, info in countries.items()

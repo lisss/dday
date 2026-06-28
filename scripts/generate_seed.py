@@ -75,7 +75,9 @@ def fetch_wb_indicator(country_code: str, indicator: str) -> float | None:
 
 def enrich_country(entry: dict) -> dict:
     code = entry["code"]
-    entry["life_expectancy"] = fetch_wb_indicator(code, WB_INDICATORS["life_expectancy"])
+    entry["life_expectancy"] = (
+        round(le) if (le := fetch_wb_indicator(code, WB_INDICATORS["life_expectancy"])) is not None else None
+    )
     entry["gdp_per_capita_usd"] = fetch_wb_indicator(code, WB_INDICATORS["gdp_per_capita"])
     entry["school_enrollment_secondary_pct"] = fetch_wb_indicator(
         code, WB_INDICATORS["school_enrollment"]

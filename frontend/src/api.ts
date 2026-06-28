@@ -54,7 +54,7 @@ export interface PredictRequest {
   income_level: "low" | "average" | "high";
   smoking: "never" | "former" | "current";
   alcohol: "none" | "light" | "moderate" | "heavy";
-  reading_hours_per_week: number;
+  reading_hours_per_month: number;
   activities: ActivityEntry[];
   ethnicity_group?: string;
 }

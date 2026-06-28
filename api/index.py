@@ -9,7 +9,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from . import storage
 from .data_fetcher import fetch_country_data, refresh_all_countries
-from .predictor import PredictRequest, PredictResponse, predict_death
+from .predictor import (
+    ACTIVITY_LABELS,
+    PredictRequest,
+    PredictResponse,
+    predict_death,
+)
 
 app = FastAPI(
     title="Death Predictor API",
@@ -35,6 +40,7 @@ async def root():
             "GET /api/health",
             "GET /api/countries",
             "GET /api/countries/{code}",
+            "GET /api/activities",
             "POST /api/predict",
             "GET /api/cron/fetch-data",
         ],
@@ -65,6 +71,16 @@ async def country_detail(code: str):
     if not info:
         raise HTTPException(status_code=404, detail=f"Country {code} not found")
     return info
+
+
+@app.get("/activities")
+async def activities():
+    return {
+        "activities": [
+            {"type": key, "label": label}
+            for key, label in ACTIVITY_LABELS.items()
+        ]
+    }
 
 
 @app.post("/predict", response_model=PredictResponse)

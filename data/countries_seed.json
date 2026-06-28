@@ -1,52 +1,4647 @@
 {
-  "updated_at": "2026-01-01T00:00:00+00:00",
+  "updated_at": "2026-06-28T21:14:16.569790+00:00",
   "countries": {
-    "US": {
-      "code": "US",
-      "name": "United States",
-      "region": "Americas",
-      "subregion": "North America",
-      "capital": "Washington, D.C.",
-      "population": 331893745,
-      "languages": ["English"],
-      "life_expectancy": 77.3,
-      "gdp_per_capita_usd": 76398.0,
-      "school_enrollment_secondary_pct": 95.2,
+    "AF": {
+      "code": "AF",
+      "name": "Afghanistan",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Kabul",
+      "population": null,
+      "languages": [],
+      "latitude": 34.5228,
+      "longitude": 69.1761,
+      "life_expectancy": 66.289,
+      "gdp_per_capita_usd": 413.757894705303,
+      "school_enrollment_secondary_pct": 59.6136016845703,
       "ethnicity": [
-        {"group": "White", "share": 59.3},
-        {"group": "Hispanic/Latino", "share": 19.1},
-        {"group": "Black/African American", "share": 13.6},
-        {"group": "Asian", "share": 6.3},
-        {"group": "Other/Mixed", "share": 1.7}
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
       ],
-      "weather_description": "Seed data — refresh via cron"
+      "weather_description": "Refresh via cron or country detail fetch"
     },
-    "GB": {
-      "code": "GB",
-      "name": "United Kingdom",
-      "region": "Europe",
-      "life_expectancy": 80.7,
-      "gdp_per_capita_usd": 45867.0,
-      "school_enrollment_secondary_pct": 98.0,
+    "AL": {
+      "code": "AL",
+      "name": "Albania",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Tirane",
+      "population": null,
+      "languages": [],
+      "latitude": 41.3317,
+      "longitude": 19.8172,
+      "life_expectancy": 79.776,
+      "gdp_per_capita_usd": 11377.7757431099,
+      "school_enrollment_secondary_pct": 108.355392456055,
       "ethnicity": [
-        {"group": "White", "share": 81.7},
-        {"group": "Asian", "share": 9.3},
-        {"group": "Black", "share": 4.0}
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
       ],
-      "weather_description": "Seed data — refresh via cron"
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DZ": {
+      "code": "DZ",
+      "name": "Algeria",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Algiers",
+      "population": null,
+      "languages": [],
+      "latitude": 36.7397,
+      "longitude": 3.05097,
+      "life_expectancy": 76.475,
+      "gdp_per_capita_usd": 5752.99076651465,
+      "school_enrollment_secondary_pct": 105.164131811213,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AS": {
+      "code": "AS",
+      "name": "American Samoa",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Pago Pago",
+      "population": null,
+      "languages": [],
+      "latitude": -14.2846,
+      "longitude": -170.691,
+      "life_expectancy": 72.992,
+      "gdp_per_capita_usd": 18017.4589383973,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AD": {
+      "code": "AD",
+      "name": "Andorra",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Andorra la Vella",
+      "population": null,
+      "languages": [],
+      "latitude": 42.5075,
+      "longitude": 1.5218,
+      "life_expectancy": 84.188,
+      "gdp_per_capita_usd": 49303.6491674336,
+      "school_enrollment_secondary_pct": 101.923820495605,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AO": {
+      "code": "AO",
+      "name": "Angola",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Luanda",
+      "population": null,
+      "languages": [],
+      "latitude": -8.81155,
+      "longitude": 13.242,
+      "life_expectancy": 64.805,
+      "gdp_per_capita_usd": 2665.87444776753,
+      "school_enrollment_secondary_pct": 51.4839046246776,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AG": {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Saint John's",
+      "population": null,
+      "languages": [],
+      "latitude": 17.1175,
+      "longitude": -61.8456,
+      "life_expectancy": 77.766,
+      "gdp_per_capita_usd": 23542.4526945578,
+      "school_enrollment_secondary_pct": 108.880778588808,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AR": {
+      "code": "AR",
+      "name": "Argentina",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Buenos Aires",
+      "population": null,
+      "languages": [],
+      "latitude": -34.6118,
+      "longitude": -58.4173,
+      "life_expectancy": 77.543,
+      "gdp_per_capita_usd": 13969.7836603737,
+      "school_enrollment_secondary_pct": 105.574584297051,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AM": {
+      "code": "AM",
+      "name": "Armenia",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Yerevan",
+      "population": null,
+      "languages": [],
+      "latitude": 40.1596,
+      "longitude": 44.509,
+      "life_expectancy": 78.319512195122,
+      "gdp_per_capita_usd": 8556.21406956719,
+      "school_enrollment_secondary_pct": 90.9458714101262,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AW": {
+      "code": "AW",
+      "name": "Aruba",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Oranjestad",
+      "population": null,
+      "languages": [],
+      "latitude": 12.5167,
+      "longitude": -70.0167,
+      "life_expectancy": 76.5,
+      "gdp_per_capita_usd": 39498.5941293797,
+      "school_enrollment_secondary_pct": 124.379366731084,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AU": {
+      "code": "AU",
+      "name": "Australia",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Canberra",
+      "population": null,
+      "languages": [],
+      "latitude": -35.282,
+      "longitude": 149.129,
+      "life_expectancy": 83.0512195121951,
+      "gdp_per_capita_usd": 64603.9856308464,
+      "school_enrollment_secondary_pct": 131.931564331055,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AT": {
+      "code": "AT",
+      "name": "Austria",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Vienna",
+      "population": null,
+      "languages": [],
+      "latitude": 48.2201,
+      "longitude": 16.3798,
+      "life_expectancy": 81.9951219512195,
+      "gdp_per_capita_usd": 58268.8787651601,
+      "school_enrollment_secondary_pct": 100.622657775879,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AZ": {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Baku",
+      "population": null,
+      "languages": [],
+      "latitude": 40.3834,
+      "longitude": 49.8932,
+      "life_expectancy": 74.576,
+      "gdp_per_capita_usd": 7283.8499076179,
+      "school_enrollment_secondary_pct": 91.1228035886648,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BS": {
+      "code": "BS",
+      "name": "Bahamas, The",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Nassau",
+      "population": null,
+      "languages": [],
+      "latitude": 25.0661,
+      "longitude": -77.339,
+      "life_expectancy": 74.71,
+      "gdp_per_capita_usd": 39455.4466548546,
+      "school_enrollment_secondary_pct": 79.4858750299258,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BH": {
+      "code": "BH",
+      "name": "Bahrain",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Manama",
+      "population": null,
+      "languages": [],
+      "latitude": 26.1921,
+      "longitude": 50.5354,
+      "life_expectancy": 81.423,
+      "gdp_per_capita_usd": 29653.5682731534,
+      "school_enrollment_secondary_pct": 98.8139181413527,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BD": {
+      "code": "BD",
+      "name": "Bangladesh",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "Dhaka",
+      "population": null,
+      "languages": [],
+      "latitude": 23.7055,
+      "longitude": 90.4113,
+      "life_expectancy": 74.93,
+      "gdp_per_capita_usd": 2593.41611680774,
+      "school_enrollment_secondary_pct": 64.2997191043961,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BB": {
+      "code": "BB",
+      "name": "Barbados",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Bridgetown",
+      "population": null,
+      "languages": [],
+      "latitude": 13.0935,
+      "longitude": -59.6105,
+      "life_expectancy": 76.332,
+      "gdp_per_capita_usd": 26544.8707282621,
+      "school_enrollment_secondary_pct": 104.371182990274,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BY": {
+      "code": "BY",
+      "name": "Belarus",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Minsk",
+      "population": null,
+      "languages": [],
+      "latitude": 53.9678,
+      "longitude": 27.5766,
+      "life_expectancy": 74.3653414634147,
+      "gdp_per_capita_usd": 8317.63399913792,
+      "school_enrollment_secondary_pct": 94.7902702871216,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BE": {
+      "code": "BE",
+      "name": "Belgium",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Brussels",
+      "population": null,
+      "languages": [],
+      "latitude": 50.8371,
+      "longitude": 4.36761,
+      "life_expectancy": 82.3,
+      "gdp_per_capita_usd": 56614.5679499036,
+      "school_enrollment_secondary_pct": 142.960266113281,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BZ": {
+      "code": "BZ",
+      "name": "Belize",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Belmopan",
+      "population": null,
+      "languages": [],
+      "latitude": 17.2534,
+      "longitude": -88.7713,
+      "life_expectancy": 73.739,
+      "gdp_per_capita_usd": 7681.24400583113,
+      "school_enrollment_secondary_pct": 86.4571583269413,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BJ": {
+      "code": "BJ",
+      "name": "Benin",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Porto-Novo",
+      "population": null,
+      "languages": [],
+      "latitude": 6.4779,
+      "longitude": 2.6323,
+      "life_expectancy": 60.961,
+      "gdp_per_capita_usd": 1485.38018885134,
+      "school_enrollment_secondary_pct": 43.5606498718262,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BM": {
+      "code": "BM",
+      "name": "Bermuda",
+      "region": "North America",
+      "subregion": null,
+      "capital": "Hamilton",
+      "population": null,
+      "languages": [],
+      "latitude": 32.3293,
+      "longitude": -64.706,
+      "life_expectancy": 82.49,
+      "gdp_per_capita_usd": 142855.374713782,
+      "school_enrollment_secondary_pct": 74.3967514038086,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BT": {
+      "code": "BT",
+      "name": "Bhutan",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "Thimphu",
+      "population": null,
+      "languages": [],
+      "latitude": 27.5768,
+      "longitude": 89.6177,
+      "life_expectancy": 73.262,
+      "gdp_per_capita_usd": 3831.32535494609,
+      "school_enrollment_secondary_pct": 86.1810001963554,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BO": {
+      "code": "BO",
+      "name": "Bolivia",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "La Paz",
+      "population": null,
+      "languages": [],
+      "latitude": -13.9908,
+      "longitude": -66.1936,
+      "life_expectancy": 68.739,
+      "gdp_per_capita_usd": 4421.16609889999,
+      "school_enrollment_secondary_pct": 90.5272216796875,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BA": {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Sarajevo",
+      "population": null,
+      "languages": [],
+      "latitude": 43.8607,
+      "longitude": 18.4214,
+      "life_expectancy": 78.044,
+      "gdp_per_capita_usd": 9358.78768951134,
+      "school_enrollment_secondary_pct": 87.8663787841797,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BW": {
+      "code": "BW",
+      "name": "Botswana",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Gaborone",
+      "population": null,
+      "languages": [],
+      "latitude": -24.6544,
+      "longitude": 25.9201,
+      "life_expectancy": 69.293,
+      "gdp_per_capita_usd": 7695.75319445165,
+      "school_enrollment_secondary_pct": 70.6292572021484,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BR": {
+      "code": "BR",
+      "name": "Brazil",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Brasilia",
+      "population": null,
+      "languages": [],
+      "latitude": -15.7801,
+      "longitude": -47.9292,
+      "life_expectancy": 76.023,
+      "gdp_per_capita_usd": 10310.5488778166,
+      "school_enrollment_secondary_pct": 104.144660949707,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VG": {
+      "code": "VG",
+      "name": "British Virgin Islands",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Road Town",
+      "population": null,
+      "languages": [],
+      "latitude": 18.431389,
+      "longitude": -64.623056,
+      "life_expectancy": 77.431,
+      "gdp_per_capita_usd": null,
+      "school_enrollment_secondary_pct": 75.5833129882812,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BN": {
+      "code": "BN",
+      "name": "Brunei Darussalam",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Bandar Seri Begawan",
+      "population": null,
+      "languages": [],
+      "latitude": 4.94199,
+      "longitude": 114.946,
+      "life_expectancy": 75.501,
+      "gdp_per_capita_usd": 33153.4738913513,
+      "school_enrollment_secondary_pct": 91.8381544399811,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BG": {
+      "code": "BG",
+      "name": "Bulgaria",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Sofia",
+      "population": null,
+      "languages": [],
+      "latitude": 42.7105,
+      "longitude": 23.3238,
+      "life_expectancy": 75.7609756097561,
+      "gdp_per_capita_usd": 17596.0173663521,
+      "school_enrollment_secondary_pct": 94.7816314697266,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BF": {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Ouagadougou",
+      "population": null,
+      "languages": [],
+      "latitude": 12.3605,
+      "longitude": -1.53395,
+      "life_expectancy": 61.292,
+      "gdp_per_capita_usd": 981.992649769081,
+      "school_enrollment_secondary_pct": 29.9905774531085,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "BI": {
+      "code": "BI",
+      "name": "Burundi",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Bujumbura",
+      "population": null,
+      "languages": [],
+      "latitude": -3.3784,
+      "longitude": 29.3639,
+      "life_expectancy": 63.818,
+      "gdp_per_capita_usd": 219.424830882698,
+      "school_enrollment_secondary_pct": 44.9151717353101,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CV": {
+      "code": "CV",
+      "name": "Cabo Verde",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Praia",
+      "population": null,
+      "languages": [],
+      "latitude": 14.9218,
+      "longitude": -23.5087,
+      "life_expectancy": 76.224,
+      "gdp_per_capita_usd": 5192.48157325878,
+      "school_enrollment_secondary_pct": 96.4315940376876,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KH": {
+      "code": "KH",
+      "name": "Cambodia",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Phnom Penh",
+      "population": null,
+      "languages": [],
+      "latitude": 11.5556,
+      "longitude": 104.874,
+      "life_expectancy": 70.817,
+      "gdp_per_capita_usd": 2627.87969756224,
+      "school_enrollment_secondary_pct": 58.7893230437643,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CM": {
+      "code": "CM",
+      "name": "Cameroon",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Yaounde",
+      "population": null,
+      "languages": [],
+      "latitude": 3.8721,
+      "longitude": 11.5174,
+      "life_expectancy": 63.968,
+      "gdp_per_capita_usd": 1830.00833684727,
+      "school_enrollment_secondary_pct": 44.840795775403,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CA": {
+      "code": "CA",
+      "name": "Canada",
+      "region": "North America",
+      "subregion": null,
+      "capital": "Ottawa",
+      "population": null,
+      "languages": [],
+      "latitude": 45.4215,
+      "longitude": -75.6919,
+      "life_expectancy": 82.1080487804878,
+      "gdp_per_capita_usd": 54340.3477224733,
+      "school_enrollment_secondary_pct": 104.320877075195,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KY": {
+      "code": "KY",
+      "name": "Cayman Islands",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "George Town",
+      "population": null,
+      "languages": [],
+      "latitude": 19.3022,
+      "longitude": -81.3857,
+      "life_expectancy": 80.54,
+      "gdp_per_capita_usd": 99143.5180243123,
+      "school_enrollment_secondary_pct": 84.7603098178773,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CF": {
+      "code": "CF",
+      "name": "Central African Republic",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Bangui",
+      "population": null,
+      "languages": [],
+      "latitude": 5.63056,
+      "longitude": 21.6407,
+      "life_expectancy": 57.671,
+      "gdp_per_capita_usd": 516.160999996036,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TD": {
+      "code": "TD",
+      "name": "Chad",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "N'Djamena",
+      "population": null,
+      "languages": [],
+      "latitude": 12.1048,
+      "longitude": 15.0445,
+      "life_expectancy": 55.238,
+      "gdp_per_capita_usd": 961.55975562506,
+      "school_enrollment_secondary_pct": 23.49298947746,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CL": {
+      "code": "CL",
+      "name": "Chile",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Santiago",
+      "population": null,
+      "languages": [],
+      "latitude": -33.475,
+      "longitude": -70.6475,
+      "life_expectancy": 81.359,
+      "gdp_per_capita_usd": 16709.8893972307,
+      "school_enrollment_secondary_pct": 105.608551025391,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CN": {
+      "code": "CN",
+      "name": "China",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Beijing",
+      "population": null,
+      "languages": [],
+      "latitude": 40.0495,
+      "longitude": 116.286,
+      "life_expectancy": 78.017,
+      "gdp_per_capita_usd": 13303.1481543868,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CO": {
+      "code": "CO",
+      "name": "Colombia",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Bogota",
+      "population": null,
+      "languages": [],
+      "latitude": 4.60987,
+      "longitude": -74.082,
+      "life_expectancy": 77.913,
+      "gdp_per_capita_usd": 7919.20886825345,
+      "school_enrollment_secondary_pct": 101.573776245117,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KM": {
+      "code": "KM",
+      "name": "Comoros",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Moroni",
+      "population": null,
+      "languages": [],
+      "latitude": -11.6986,
+      "longitude": 43.2418,
+      "life_expectancy": 67.023,
+      "gdp_per_capita_usd": 1662.75663312504,
+      "school_enrollment_secondary_pct": 54.8057289123535,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CD": {
+      "code": "CD",
+      "name": "Congo, Dem. Rep.",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Kinshasa",
+      "population": null,
+      "languages": [],
+      "latitude": -4.325,
+      "longitude": 15.3222,
+      "life_expectancy": 62.074,
+      "gdp_per_capita_usd": 649.383338556725,
+      "school_enrollment_secondary_pct": 55.4860992431641,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CG": {
+      "code": "CG",
+      "name": "Congo, Rep.",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Brazzaville",
+      "population": null,
+      "languages": [],
+      "latitude": -4.2767,
+      "longitude": 15.2662,
+      "life_expectancy": 66.001,
+      "gdp_per_capita_usd": 2482.2489948456,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CR": {
+      "code": "CR",
+      "name": "Costa Rica",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "San Jose",
+      "population": null,
+      "languages": [],
+      "latitude": 9.63701,
+      "longitude": -84.0089,
+      "life_expectancy": 80.996,
+      "gdp_per_capita_usd": 18587.1532203482,
+      "school_enrollment_secondary_pct": 121.810760498047,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CI": {
+      "code": "CI",
+      "name": "Cote d'Ivoire",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Yamoussoukro",
+      "population": null,
+      "languages": [],
+      "latitude": 5.332,
+      "longitude": -4.0305,
+      "life_expectancy": 62.11,
+      "gdp_per_capita_usd": 2727.8935220697,
+      "school_enrollment_secondary_pct": 65.3065056618336,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "HR": {
+      "code": "HR",
+      "name": "Croatia",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Zagreb",
+      "population": null,
+      "languages": [],
+      "latitude": 45.8069,
+      "longitude": 15.9614,
+      "life_expectancy": 78.9292682926829,
+      "gdp_per_capita_usd": 24050.4397933135,
+      "school_enrollment_secondary_pct": 105.025161743164,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CU": {
+      "code": "CU",
+      "name": "Cuba",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Havana",
+      "population": null,
+      "languages": [],
+      "latitude": 23.1333,
+      "longitude": -82.3667,
+      "life_expectancy": 78.264,
+      "gdp_per_capita_usd": 9605.27914559614,
+      "school_enrollment_secondary_pct": 91.7456844321038,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CW": {
+      "code": "CW",
+      "name": "Curacao",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Willemstad",
+      "population": null,
+      "languages": [],
+      "latitude": null,
+      "longitude": null,
+      "life_expectancy": 76.989,
+      "gdp_per_capita_usd": 22832.8953958667,
+      "school_enrollment_secondary_pct": 89.9053421020508,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CY": {
+      "code": "CY",
+      "name": "Cyprus",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Nicosia",
+      "population": null,
+      "languages": [],
+      "latitude": 35.1676,
+      "longitude": 33.3736,
+      "life_expectancy": 81.821,
+      "gdp_per_capita_usd": 38674.29296875,
+      "school_enrollment_secondary_pct": 106.741279602051,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CZ": {
+      "code": "CZ",
+      "name": "Czechia",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Prague",
+      "population": null,
+      "languages": [],
+      "latitude": 50.0878,
+      "longitude": 14.4205,
+      "life_expectancy": 79.9780487804878,
+      "gdp_per_capita_usd": 31823.3078290564,
+      "school_enrollment_secondary_pct": 97.6154174804688,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DK": {
+      "code": "DK",
+      "name": "Denmark",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Copenhagen",
+      "population": null,
+      "languages": [],
+      "latitude": 55.6763,
+      "longitude": 12.5681,
+      "life_expectancy": 82.2536585365854,
+      "gdp_per_capita_usd": 71026.4832271897,
+      "school_enrollment_secondary_pct": 125.628089904785,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DJ": {
+      "code": "DJ",
+      "name": "Djibouti",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Djibouti",
+      "population": null,
+      "languages": [],
+      "latitude": 11.5806,
+      "longitude": 43.1425,
+      "life_expectancy": 66.202,
+      "gdp_per_capita_usd": 3552.72335079222,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DM": {
+      "code": "DM",
+      "name": "Dominica",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Roseau",
+      "population": null,
+      "languages": [],
+      "latitude": 15.2976,
+      "longitude": -61.39,
+      "life_expectancy": 71.294,
+      "gdp_per_capita_usd": 10405.2787777582,
+      "school_enrollment_secondary_pct": 102.585807800293,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DO": {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Santo Domingo",
+      "population": null,
+      "languages": [],
+      "latitude": 18.479,
+      "longitude": -69.8908,
+      "life_expectancy": 73.868,
+      "gdp_per_capita_usd": 10875.6618443092,
+      "school_enrollment_secondary_pct": 76.3648403372637,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "EC": {
+      "code": "EC",
+      "name": "Ecuador",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Quito",
+      "population": null,
+      "languages": [],
+      "latitude": -0.229498,
+      "longitude": -78.5243,
+      "life_expectancy": 77.579,
+      "gdp_per_capita_usd": 6874.705739766,
+      "school_enrollment_secondary_pct": 92.8118025876465,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "EG": {
+      "code": "EG",
+      "name": "Egypt, Arab Rep.",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Cairo",
+      "population": null,
+      "languages": [],
+      "latitude": 30.0982,
+      "longitude": 31.2461,
+      "life_expectancy": 71.806,
+      "gdp_per_capita_usd": 3338.47371395895,
+      "school_enrollment_secondary_pct": 84.8286031306453,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SV": {
+      "code": "SV",
+      "name": "El Salvador",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "San Salvador",
+      "population": null,
+      "languages": [],
+      "latitude": 13.7034,
+      "longitude": -89.2073,
+      "life_expectancy": 72.302,
+      "gdp_per_capita_usd": 5579.65969165029,
+      "school_enrollment_secondary_pct": 62.1425847697468,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GQ": {
+      "code": "GQ",
+      "name": "Equatorial Guinea",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Malabo",
+      "population": null,
+      "languages": [],
+      "latitude": 3.7523,
+      "longitude": 8.7741,
+      "life_expectancy": 63.906,
+      "gdp_per_capita_usd": 6745.40013244916,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ER": {
+      "code": "ER",
+      "name": "Eritrea",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Asmara",
+      "population": null,
+      "languages": [],
+      "latitude": 15.3315,
+      "longitude": 38.9183,
+      "life_expectancy": 68.893,
+      "gdp_per_capita_usd": null,
+      "school_enrollment_secondary_pct": 44.0441284179688,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "EE": {
+      "code": "EE",
+      "name": "Estonia",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Tallinn",
+      "population": null,
+      "languages": [],
+      "latitude": 59.4392,
+      "longitude": 24.7586,
+      "life_expectancy": 79.2951219512195,
+      "gdp_per_capita_usd": 31428.3547816104,
+      "school_enrollment_secondary_pct": 108.538726806641,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SZ": {
+      "code": "SZ",
+      "name": "Eswatini",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Mbabane",
+      "population": null,
+      "languages": [],
+      "latitude": -26.5225,
+      "longitude": 31.4659,
+      "life_expectancy": 64.264,
+      "gdp_per_capita_usd": 3909.55892378182,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ET": {
+      "code": "ET",
+      "name": "Ethiopia",
+      "region": "Sub-Saharan Africa",
+      "subregion": null,
+      "capital": "Addis Ababa",
+      "population": null,
+      "languages": [],
+      "latitude": 9.02274,
+      "longitude": 38.7468,
+      "life_expectancy": 67.603,
+      "gdp_per_capita_usd": 1133.88279681719,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "FO": {
+      "code": "FO",
+      "name": "Faroe Islands",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Torshavn",
+      "population": null,
+      "languages": [],
+      "latitude": 61.8926,
+      "longitude": -6.91181,
+      "life_expectancy": 83.0832463414634,
+      "gdp_per_capita_usd": 74119.6607553879,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "FJ": {
+      "code": "FJ",
+      "name": "Fiji",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Suva",
+      "population": null,
+      "languages": [],
+      "latitude": -18.1149,
+      "longitude": 178.399,
+      "life_expectancy": 67.463,
+      "gdp_per_capita_usd": 6425.74151715712,
+      "school_enrollment_secondary_pct": 98.0927630329298,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "FI": {
+      "code": "FI",
+      "name": "Finland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Helsinki",
+      "population": null,
+      "languages": [],
+      "latitude": 60.1608,
+      "longitude": 24.9525,
+      "life_expectancy": 82.3365853658537,
+      "gdp_per_capita_usd": 53149.7671934051,
+      "school_enrollment_secondary_pct": 142.395156860352,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "FR": {
+      "code": "FR",
+      "name": "France",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Paris",
+      "population": null,
+      "languages": [],
+      "latitude": 48.8566,
+      "longitude": 2.35097,
+      "life_expectancy": 82.9804878048781,
+      "gdp_per_capita_usd": 46103.0840855884,
+      "school_enrollment_secondary_pct": 103.78540802002,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PF": {
+      "code": "PF",
+      "name": "French Polynesia",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Papeete",
+      "population": null,
+      "languages": [],
+      "latitude": -17.535,
+      "longitude": -149.57,
+      "life_expectancy": 84.192,
+      "gdp_per_capita_usd": 22439.8838746025,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GA": {
+      "code": "GA",
+      "name": "Gabon",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Libreville",
+      "population": null,
+      "languages": [],
+      "latitude": 0.38832,
+      "longitude": 9.45162,
+      "life_expectancy": 68.511,
+      "gdp_per_capita_usd": 8230.04311451151,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GM": {
+      "code": "GM",
+      "name": "Gambia, The",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Banjul",
+      "population": null,
+      "languages": [],
+      "latitude": 13.4495,
+      "longitude": -16.5885,
+      "life_expectancy": 66.057,
+      "gdp_per_capita_usd": 871.340291776294,
+      "school_enrollment_secondary_pct": 107.027125590442,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GE": {
+      "code": "GE",
+      "name": "Georgia",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Tbilisi",
+      "population": null,
+      "languages": [],
+      "latitude": 41.71,
+      "longitude": 44.793,
+      "life_expectancy": 74.657,
+      "gdp_per_capita_usd": 9241.49122313713,
+      "school_enrollment_secondary_pct": 100.959315536762,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "DE": {
+      "code": "DE",
+      "name": "Germany",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Berlin",
+      "population": null,
+      "languages": [],
+      "latitude": 52.5235,
+      "longitude": 13.4115,
+      "life_expectancy": 80.7926829268293,
+      "gdp_per_capita_usd": 56103.7323182554,
+      "school_enrollment_secondary_pct": 100.243698120117,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GH": {
+      "code": "GH",
+      "name": "Ghana",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Accra",
+      "population": null,
+      "languages": [],
+      "latitude": 5.57045,
+      "longitude": -0.20795,
+      "life_expectancy": 65.695,
+      "gdp_per_capita_usd": 2390.77237652715,
+      "school_enrollment_secondary_pct": 75.7174682617188,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GR": {
+      "code": "GR",
+      "name": "Greece",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Athens",
+      "population": null,
+      "languages": [],
+      "latitude": 37.9792,
+      "longitude": 23.7166,
+      "life_expectancy": 81.8390243902439,
+      "gdp_per_capita_usd": 24626.1481858973,
+      "school_enrollment_secondary_pct": 105.191741943359,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GL": {
+      "code": "GL",
+      "name": "Greenland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Nuuk",
+      "population": null,
+      "languages": [],
+      "latitude": 64.1836,
+      "longitude": -51.7214,
+      "life_expectancy": 70.2734146341463,
+      "gdp_per_capita_usd": 58498.9707973609,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GD": {
+      "code": "GD",
+      "name": "Grenada",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Saint George's",
+      "population": null,
+      "languages": [],
+      "latitude": 12.0653,
+      "longitude": -61.7449,
+      "life_expectancy": 75.367,
+      "gdp_per_capita_usd": 11705.0902976658,
+      "school_enrollment_secondary_pct": 100.731679432948,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GU": {
+      "code": "GU",
+      "name": "Guam",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Agana",
+      "population": null,
+      "languages": [],
+      "latitude": 13.4443,
+      "longitude": 144.794,
+      "life_expectancy": 77.422,
+      "gdp_per_capita_usd": 41833.1517132825,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GT": {
+      "code": "GT",
+      "name": "Guatemala",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Guatemala City",
+      "population": null,
+      "languages": [],
+      "latitude": 14.6248,
+      "longitude": -90.5328,
+      "life_expectancy": 72.746,
+      "gdp_per_capita_usd": 6150.02571438505,
+      "school_enrollment_secondary_pct": 49.5765804970836,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GN": {
+      "code": "GN",
+      "name": "Guinea",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Conakry",
+      "population": null,
+      "languages": [],
+      "latitude": 9.51667,
+      "longitude": -13.7,
+      "life_expectancy": 60.904,
+      "gdp_per_capita_usd": 1694.95375862193,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GW": {
+      "code": "GW",
+      "name": "Guinea-Bissau",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Bissau",
+      "population": null,
+      "languages": [],
+      "latitude": 11.8037,
+      "longitude": -15.1804,
+      "life_expectancy": 64.254,
+      "gdp_per_capita_usd": 1007.74151728028,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GY": {
+      "code": "GY",
+      "name": "Guyana",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Georgetown",
+      "population": null,
+      "languages": [],
+      "latitude": 6.80461,
+      "longitude": -58.1548,
+      "life_expectancy": 70.319,
+      "gdp_per_capita_usd": 29675.2443873316,
+      "school_enrollment_secondary_pct": 91.4304496450171,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "HT": {
+      "code": "HT",
+      "name": "Haiti",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Port-au-Prince",
+      "population": null,
+      "languages": [],
+      "latitude": 18.5392,
+      "longitude": -72.3288,
+      "life_expectancy": 65.119,
+      "gdp_per_capita_usd": 2142.62330526788,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "HN": {
+      "code": "HN",
+      "name": "Honduras",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Tegucigalpa",
+      "population": null,
+      "languages": [],
+      "latitude": 15.1333,
+      "longitude": -87.4667,
+      "life_expectancy": 73.044,
+      "gdp_per_capita_usd": 3426.43483328923,
+      "school_enrollment_secondary_pct": 51.7639813154374,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "HU": {
+      "code": "HU",
+      "name": "Hungary",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Budapest",
+      "population": null,
+      "languages": [],
+      "latitude": 47.4984,
+      "longitude": 19.0408,
+      "life_expectancy": 76.7243902439025,
+      "gdp_per_capita_usd": 23292.3263882478,
+      "school_enrollment_secondary_pct": 107.350929260254,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IS": {
+      "code": "IS",
+      "name": "Iceland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Reykjavik",
+      "population": null,
+      "languages": [],
+      "latitude": 64.1353,
+      "longitude": -21.8952,
+      "life_expectancy": null,
+      "gdp_per_capita_usd": 86040.5309851288,
+      "school_enrollment_secondary_pct": 108.911361694336,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IN": {
+      "code": "IN",
+      "name": "India",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "New Delhi",
+      "population": null,
+      "languages": [],
+      "latitude": 28.6353,
+      "longitude": 77.225,
+      "life_expectancy": 72.235,
+      "gdp_per_capita_usd": 2694.73780859961,
+      "school_enrollment_secondary_pct": 78.1058073224606,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ID": {
+      "code": "ID",
+      "name": "Indonesia",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Jakarta",
+      "population": null,
+      "languages": [],
+      "latitude": -6.19752,
+      "longitude": 106.83,
+      "life_expectancy": 71.288,
+      "gdp_per_capita_usd": 4925.43048751861,
+      "school_enrollment_secondary_pct": 98.836444459078,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IR": {
+      "code": "IR",
+      "name": "Iran, Islamic Rep.",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Tehran",
+      "population": null,
+      "languages": [],
+      "latitude": 35.6878,
+      "longitude": 51.4447,
+      "life_expectancy": 77.854,
+      "gdp_per_capita_usd": 5190.16959024821,
+      "school_enrollment_secondary_pct": 85.1469802856445,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IQ": {
+      "code": "IQ",
+      "name": "Iraq",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Baghdad",
+      "population": null,
+      "languages": [],
+      "latitude": 33.3302,
+      "longitude": 44.394,
+      "life_expectancy": 72.424,
+      "gdp_per_capita_usd": 6073.61032342708,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IE": {
+      "code": "IE",
+      "name": "Ireland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Dublin",
+      "population": null,
+      "languages": [],
+      "latitude": 53.3441,
+      "longitude": -6.26749,
+      "life_expectancy": null,
+      "gdp_per_capita_usd": 112894.953240805,
+      "school_enrollment_secondary_pct": 130.604965209961,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IM": {
+      "code": "IM",
+      "name": "Isle of Man",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Douglas",
+      "population": null,
+      "languages": [],
+      "latitude": 54.1509,
+      "longitude": -4.47928,
+      "life_expectancy": 81.091,
+      "gdp_per_capita_usd": 88328.548125887,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "IT": {
+      "code": "IT",
+      "name": "Italy",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Rome",
+      "population": null,
+      "languages": [],
+      "latitude": 41.8955,
+      "longitude": 12.4823,
+      "life_expectancy": 83.9512195121951,
+      "gdp_per_capita_usd": 40385.3413957669,
+      "school_enrollment_secondary_pct": 100.678756713867,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "JM": {
+      "code": "JM",
+      "name": "Jamaica",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Kingston",
+      "population": null,
+      "languages": [],
+      "latitude": 17.9927,
+      "longitude": -76.792,
+      "life_expectancy": 71.606,
+      "gdp_per_capita_usd": 7753.8006955432,
+      "school_enrollment_secondary_pct": 84.4572372436523,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
     },
     "JP": {
       "code": "JP",
       "name": "Japan",
-      "region": "Asia",
-      "life_expectancy": 84.5,
-      "gdp_per_capita_usd": 33815.0,
-      "school_enrollment_secondary_pct": 101.0,
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Tokyo",
+      "population": null,
+      "languages": [],
+      "latitude": 35.67,
+      "longitude": 139.77,
+      "life_expectancy": 84.0363414634146,
+      "gdp_per_capita_usd": 32487.0778047567,
+      "school_enrollment_secondary_pct": 101.537071228027,
       "ethnicity": [
-        {"group": "Japanese", "share": 97.5},
-        {"group": "Other", "share": 2.5}
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
       ],
-      "weather_description": "Seed data — refresh via cron"
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "JO": {
+      "code": "JO",
+      "name": "Jordan",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Amman",
+      "population": null,
+      "languages": [],
+      "latitude": 31.9497,
+      "longitude": 35.9263,
+      "life_expectancy": 77.981,
+      "gdp_per_capita_usd": 4618.09592498567,
+      "school_enrollment_secondary_pct": 91.7518621587381,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KZ": {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Astana",
+      "population": null,
+      "languages": [],
+      "latitude": 51.1879,
+      "longitude": 71.4382,
+      "life_expectancy": 74.531,
+      "gdp_per_capita_usd": 14154.6324958076,
+      "school_enrollment_secondary_pct": 97.198884231219,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KE": {
+      "code": "KE",
+      "name": "Kenya",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Nairobi",
+      "population": null,
+      "languages": [],
+      "latitude": -1.27975,
+      "longitude": 36.8126,
+      "life_expectancy": 63.834,
+      "gdp_per_capita_usd": 2132.43452097647,
+      "school_enrollment_secondary_pct": 84.3083880306996,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KI": {
+      "code": "KI",
+      "name": "Kiribati",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Tarawa",
+      "population": null,
+      "languages": [],
+      "latitude": 1.32905,
+      "longitude": 172.979,
+      "life_expectancy": 66.6,
+      "gdp_per_capita_usd": 2288.63471423684,
+      "school_enrollment_secondary_pct": 90.2786712646484,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KP": {
+      "code": "KP",
+      "name": "Korea, Dem. People's Rep.",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Pyongyang",
+      "population": null,
+      "languages": [],
+      "latitude": 39.0319,
+      "longitude": 125.754,
+      "life_expectancy": 73.743,
+      "gdp_per_capita_usd": null,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KR": {
+      "code": "KR",
+      "name": "Korea, Rep.",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Seoul",
+      "population": null,
+      "languages": [],
+      "latitude": 37.5323,
+      "longitude": 126.957,
+      "life_expectancy": 83.6292682926829,
+      "gdp_per_capita_usd": 36238.639908315,
+      "school_enrollment_secondary_pct": 96.2539901733398,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "XK": {
+      "code": "XK",
+      "name": "Kosovo",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Pristina",
+      "population": null,
+      "languages": [],
+      "latitude": 42.565,
+      "longitude": 20.926,
+      "life_expectancy": 78.222,
+      "gdp_per_capita_usd": 7023.06598512878,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KW": {
+      "code": "KW",
+      "name": "Kuwait",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Kuwait City",
+      "population": null,
+      "languages": [],
+      "latitude": 29.3721,
+      "longitude": 47.9824,
+      "life_expectancy": 84.580487804878,
+      "gdp_per_capita_usd": 32717.7186631255,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KG": {
+      "code": "KG",
+      "name": "Kyrgyz Republic",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Bishkek",
+      "population": null,
+      "languages": [],
+      "latitude": 42.8851,
+      "longitude": 74.6057,
+      "life_expectancy": 72.4,
+      "gdp_per_capita_usd": 2420.18542283831,
+      "school_enrollment_secondary_pct": 91.339996215143,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LA": {
+      "code": "LA",
+      "name": "Lao PDR",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Vientiane",
+      "population": null,
+      "languages": [],
+      "latitude": 18.5826,
+      "longitude": 102.177,
+      "life_expectancy": 69.225,
+      "gdp_per_capita_usd": 2123.97909415109,
+      "school_enrollment_secondary_pct": 51.8523602531839,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LV": {
+      "code": "LV",
+      "name": "Latvia",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Riga",
+      "population": null,
+      "languages": [],
+      "latitude": 56.9465,
+      "longitude": 24.1048,
+      "life_expectancy": 76.4292682926829,
+      "gdp_per_capita_usd": 23409.0845154775,
+      "school_enrollment_secondary_pct": 101.252647399902,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LB": {
+      "code": "LB",
+      "name": "Lebanon",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Beirut",
+      "population": null,
+      "languages": [],
+      "latitude": 33.8872,
+      "longitude": 35.5134,
+      "life_expectancy": 77.945,
+      "gdp_per_capita_usd": 3477.72489842684,
+      "school_enrollment_secondary_pct": 63.7923011779785,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LS": {
+      "code": "LS",
+      "name": "Lesotho",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Maseru",
+      "population": null,
+      "languages": [],
+      "latitude": -29.5208,
+      "longitude": 27.7167,
+      "life_expectancy": 57.798,
+      "gdp_per_capita_usd": 971.90771824829,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LR": {
+      "code": "LR",
+      "name": "Liberia",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Monrovia",
+      "population": null,
+      "languages": [],
+      "latitude": 6.30039,
+      "longitude": -10.7957,
+      "life_expectancy": 62.324,
+      "gdp_per_capita_usd": 851.497723870206,
+      "school_enrollment_secondary_pct": 37.7416801452637,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LY": {
+      "code": "LY",
+      "name": "Libya",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Tripoli",
+      "population": null,
+      "languages": [],
+      "latitude": 32.8578,
+      "longitude": 13.1072,
+      "life_expectancy": 71.121,
+      "gdp_per_capita_usd": 6569.16408678648,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LI": {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Vaduz",
+      "population": null,
+      "languages": [],
+      "latitude": 47.1411,
+      "longitude": 9.52148,
+      "life_expectancy": 84.2,
+      "gdp_per_capita_usd": 206780.590353385,
+      "school_enrollment_secondary_pct": 118.726867675781,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LT": {
+      "code": "LT",
+      "name": "Lithuania",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Vilnius",
+      "population": null,
+      "languages": [],
+      "latitude": 54.6896,
+      "longitude": 25.2799,
+      "life_expectancy": 77.1951219512195,
+      "gdp_per_capita_usd": 29384.0189598663,
+      "school_enrollment_secondary_pct": 104.860809326172,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LU": {
+      "code": "LU",
+      "name": "Luxembourg",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Luxembourg",
+      "population": null,
+      "languages": [],
+      "latitude": 49.61,
+      "longitude": 6.1296,
+      "life_expectancy": 83.1951219512195,
+      "gdp_per_capita_usd": 137781.681659123,
+      "school_enrollment_secondary_pct": 108.577438354492,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MG": {
+      "code": "MG",
+      "name": "Madagascar",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Antananarivo",
+      "population": null,
+      "languages": [],
+      "latitude": -20.4667,
+      "longitude": 45.7167,
+      "life_expectancy": 63.835,
+      "gdp_per_capita_usd": 544.987501003384,
+      "school_enrollment_secondary_pct": 34.1320359801924,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MW": {
+      "code": "MW",
+      "name": "Malawi",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Lilongwe",
+      "population": null,
+      "languages": [],
+      "latitude": -13.9899,
+      "longitude": 33.7703,
+      "life_expectancy": 67.561,
+      "gdp_per_capita_usd": 522.570393642547,
+      "school_enrollment_secondary_pct": 36.644092994481,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MY": {
+      "code": "MY",
+      "name": "Malaysia",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Kuala Lumpur",
+      "population": null,
+      "languages": [],
+      "latitude": 3.12433,
+      "longitude": 101.684,
+      "life_expectancy": 76.821,
+      "gdp_per_capita_usd": 11874.4273684245,
+      "school_enrollment_secondary_pct": 80.2757406864183,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MV": {
+      "code": "MV",
+      "name": "Maldives",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "Male",
+      "population": null,
+      "languages": [],
+      "latitude": 4.1742,
+      "longitude": 73.5109,
+      "life_expectancy": 81.285,
+      "gdp_per_capita_usd": 13379.3513577224,
+      "school_enrollment_secondary_pct": 79.3565296847573,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ML": {
+      "code": "ML",
+      "name": "Mali",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Bamako",
+      "population": null,
+      "languages": [],
+      "latitude": 13.5667,
+      "longitude": -7.50034,
+      "life_expectancy": 60.675,
+      "gdp_per_capita_usd": 1094.61949265799,
+      "school_enrollment_secondary_pct": 38.9389470920545,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MT": {
+      "code": "MT",
+      "name": "Malta",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Valletta",
+      "population": null,
+      "languages": [],
+      "latitude": 35.9042,
+      "longitude": 14.5189,
+      "life_expectancy": 82.9560975609756,
+      "gdp_per_capita_usd": 43898.5781808597,
+      "school_enrollment_secondary_pct": 103.027229309082,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MH": {
+      "code": "MH",
+      "name": "Marshall Islands",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Majuro",
+      "population": null,
+      "languages": [],
+      "latitude": 7.11046,
+      "longitude": 171.135,
+      "life_expectancy": 67.075,
+      "gdp_per_capita_usd": 7726.33668877794,
+      "school_enrollment_secondary_pct": 85.7558637219654,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MR": {
+      "code": "MR",
+      "name": "Mauritania",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Nouakchott",
+      "population": null,
+      "languages": [],
+      "latitude": 18.2367,
+      "longitude": -15.9824,
+      "life_expectancy": 68.713,
+      "gdp_per_capita_usd": 2110.12036938187,
+      "school_enrollment_secondary_pct": 36.0277030077074,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MU": {
+      "code": "MU",
+      "name": "Mauritius",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Port Louis",
+      "population": null,
+      "languages": [],
+      "latitude": -20.1605,
+      "longitude": 57.4977,
+      "life_expectancy": 73.7890243902439,
+      "gdp_per_capita_usd": 11990.7798944837,
+      "school_enrollment_secondary_pct": 90.7246586359898,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MX": {
+      "code": "MX",
+      "name": "Mexico",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Mexico City",
+      "population": null,
+      "languages": [],
+      "latitude": 19.427,
+      "longitude": -99.1276,
+      "life_expectancy": 75.264,
+      "gdp_per_capita_usd": 14185.7812248529,
+      "school_enrollment_secondary_pct": 103.093322753906,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "FM": {
+      "code": "FM",
+      "name": "Micronesia, Fed. Sts.",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Palikir",
+      "population": null,
+      "languages": [],
+      "latitude": 6.91771,
+      "longitude": 158.185,
+      "life_expectancy": 67.357,
+      "gdp_per_capita_usd": 4166.00476748564,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MD": {
+      "code": "MD",
+      "name": "Moldova",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Chisinau",
+      "population": null,
+      "languages": [],
+      "latitude": 47.0167,
+      "longitude": 28.8497,
+      "life_expectancy": 71.332,
+      "gdp_per_capita_usd": 7576.19589413326,
+      "school_enrollment_secondary_pct": 99.3439166347193,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MC": {
+      "code": "MC",
+      "name": "Monaco",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Monaco",
+      "population": null,
+      "languages": [],
+      "latitude": 43.7325,
+      "longitude": 7.41891,
+      "life_expectancy": 86.497,
+      "gdp_per_capita_usd": 288001.433369041,
+      "school_enrollment_secondary_pct": 158.546615600586,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MN": {
+      "code": "MN",
+      "name": "Mongolia",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Ulaanbaatar",
+      "population": null,
+      "languages": [],
+      "latitude": 47.9129,
+      "longitude": 106.937,
+      "life_expectancy": 72.3980487804878,
+      "gdp_per_capita_usd": 6750.6301157724,
+      "school_enrollment_secondary_pct": 96.8181201904352,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ME": {
+      "code": "ME",
+      "name": "Montenegro",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Podgorica",
+      "population": null,
+      "languages": [],
+      "latitude": 42.4602,
+      "longitude": 19.2595,
+      "life_expectancy": 77.890243902439,
+      "gdp_per_capita_usd": 13263.3281277699,
+      "school_enrollment_secondary_pct": 93.8724975585938,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MA": {
+      "code": "MA",
+      "name": "Morocco",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Rabat",
+      "population": null,
+      "languages": [],
+      "latitude": 33.9905,
+      "longitude": -6.8704,
+      "life_expectancy": 75.493,
+      "gdp_per_capita_usd": 4153.1943359375,
+      "school_enrollment_secondary_pct": 89.9834863018408,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MZ": {
+      "code": "MZ",
+      "name": "Mozambique",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Maputo",
+      "population": null,
+      "languages": [],
+      "latitude": -25.9664,
+      "longitude": 32.5713,
+      "life_expectancy": 63.797,
+      "gdp_per_capita_usd": 656.776824637306,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MM": {
+      "code": "MM",
+      "name": "Myanmar",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Naypyidaw",
+      "population": null,
+      "languages": [],
+      "latitude": 21.914,
+      "longitude": 95.9562,
+      "life_expectancy": 67.095,
+      "gdp_per_capita_usd": 1359.05001560107,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NA": {
+      "code": "NA",
+      "name": "Namibia",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Windhoek",
+      "population": null,
+      "languages": [],
+      "latitude": -22.5648,
+      "longitude": 17.0931,
+      "life_expectancy": 67.516,
+      "gdp_per_capita_usd": 4413.12752211572,
+      "school_enrollment_secondary_pct": 81.9566828199727,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NR": {
+      "code": "NR",
+      "name": "Nauru",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Yaren District",
+      "population": null,
+      "languages": [],
+      "latitude": -0.5477,
+      "longitude": 166.920867,
+      "life_expectancy": 62.279,
+      "gdp_per_capita_usd": 13609.158837552,
+      "school_enrollment_secondary_pct": 91.5133521769495,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NP": {
+      "code": "NP",
+      "name": "Nepal",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "Kathmandu",
+      "population": null,
+      "languages": [],
+      "latitude": 27.6939,
+      "longitude": 85.3157,
+      "life_expectancy": 70.636,
+      "gdp_per_capita_usd": 1447.31004458428,
+      "school_enrollment_secondary_pct": 90.3878462155916,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NL": {
+      "code": "NL",
+      "name": "Netherlands",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Amsterdam",
+      "population": null,
+      "languages": [],
+      "latitude": 52.3738,
+      "longitude": 4.89095,
+      "life_expectancy": 81.9658536585366,
+      "gdp_per_capita_usd": 67520.4218956281,
+      "school_enrollment_secondary_pct": 137.514724731445,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NC": {
+      "code": "NC",
+      "name": "New Caledonia",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Noum'ea",
+      "population": null,
+      "languages": [],
+      "latitude": -22.2677,
+      "longitude": 166.464,
+      "life_expectancy": 78.921,
+      "gdp_per_capita_usd": 29213.1923192946,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NZ": {
+      "code": "NZ",
+      "name": "New Zealand",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Wellington",
+      "population": null,
+      "languages": [],
+      "latitude": -41.2865,
+      "longitude": 174.776,
+      "life_expectancy": 82.009756097561,
+      "gdp_per_capita_usd": 49205.1792146792,
+      "school_enrollment_secondary_pct": 114.231056213379,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NI": {
+      "code": "NI",
+      "name": "Nicaragua",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Managua",
+      "population": null,
+      "languages": [],
+      "latitude": 12.1475,
+      "longitude": -86.2734,
+      "life_expectancy": 75.1,
+      "gdp_per_capita_usd": 2847.53966339498,
+      "school_enrollment_secondary_pct": 70.1749572753906,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NE": {
+      "code": "NE",
+      "name": "Niger",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Niamey",
+      "population": null,
+      "languages": [],
+      "latitude": 13.514,
+      "longitude": 2.1073,
+      "life_expectancy": 61.433,
+      "gdp_per_capita_usd": 735.270255787226,
+      "school_enrollment_secondary_pct": 19.8664761204349,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NG": {
+      "code": "NG",
+      "name": "Nigeria",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Abuja",
+      "population": null,
+      "languages": [],
+      "latitude": 9.05804,
+      "longitude": 7.48906,
+      "life_expectancy": 54.635,
+      "gdp_per_capita_usd": 1084.16041805436,
+      "school_enrollment_secondary_pct": 46.8931503295898,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MK": {
+      "code": "MK",
+      "name": "North Macedonia",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Skopje",
+      "population": null,
+      "languages": [],
+      "latitude": 42.0024,
+      "longitude": 21.4361,
+      "life_expectancy": 76.6165853658537,
+      "gdp_per_capita_usd": 9291.85661671864,
+      "school_enrollment_secondary_pct": 90.0724868774414,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MP": {
+      "code": "MP",
+      "name": "Northern Mariana Islands",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Saipan",
+      "population": null,
+      "languages": [],
+      "latitude": 15.1935,
+      "longitude": 145.765,
+      "life_expectancy": 78.947,
+      "gdp_per_capita_usd": 23785.754590043,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "NO": {
+      "code": "NO",
+      "name": "Norway",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Oslo",
+      "population": null,
+      "languages": [],
+      "latitude": 59.9138,
+      "longitude": 10.7387,
+      "life_expectancy": 83.1609756097561,
+      "gdp_per_capita_usd": 86785.4334489176,
+      "school_enrollment_secondary_pct": 116.254272460938,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "OM": {
+      "code": "OM",
+      "name": "Oman",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Muscat",
+      "population": null,
+      "languages": [],
+      "latitude": 23.6105,
+      "longitude": 58.5874,
+      "life_expectancy": 80.246,
+      "gdp_per_capita_usd": 20285.2272897377,
+      "school_enrollment_secondary_pct": 95.1220397949219,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PK": {
+      "code": "PK",
+      "name": "Pakistan",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Islamabad",
+      "population": null,
+      "languages": [],
+      "latitude": 30.5167,
+      "longitude": 72.8,
+      "life_expectancy": 67.799,
+      "gdp_per_capita_usd": 1478.77277977996,
+      "school_enrollment_secondary_pct": 48.2805022055997,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PW": {
+      "code": "PW",
+      "name": "Palau",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Koror",
+      "population": null,
+      "languages": [],
+      "latitude": 7.34194,
+      "longitude": 134.479,
+      "life_expectancy": 69.383,
+      "gdp_per_capita_usd": 15610.8231931032,
+      "school_enrollment_secondary_pct": 95.7270847691247,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PA": {
+      "code": "PA",
+      "name": "Panama",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Panama City",
+      "population": null,
+      "languages": [],
+      "latitude": 8.99427,
+      "longitude": -79.5188,
+      "life_expectancy": 79.775,
+      "gdp_per_capita_usd": 19161.2188501596,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PG": {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Port Moresby",
+      "population": null,
+      "languages": [],
+      "latitude": -9.47357,
+      "longitude": 147.194,
+      "life_expectancy": 66.256,
+      "gdp_per_capita_usd": 3006.70564478923,
+      "school_enrollment_secondary_pct": 52.0929750873194,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PY": {
+      "code": "PY",
+      "name": "Paraguay",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Asuncion",
+      "population": null,
+      "languages": [],
+      "latitude": -25.3005,
+      "longitude": -57.6362,
+      "life_expectancy": 73.982,
+      "gdp_per_capita_usd": 6416.09708970845,
+      "school_enrollment_secondary_pct": 79.1305613911018,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PE": {
+      "code": "PE",
+      "name": "Peru",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Lima",
+      "population": null,
+      "languages": [],
+      "latitude": -12.0931,
+      "longitude": -77.0465,
+      "life_expectancy": 77.941,
+      "gdp_per_capita_usd": 8452.37167056621,
+      "school_enrollment_secondary_pct": 108.289047241211,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PH": {
+      "code": "PH",
+      "name": "Philippines",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Manila",
+      "population": null,
+      "languages": [],
+      "latitude": 14.5515,
+      "longitude": 121.035,
+      "life_expectancy": 69.946,
+      "gdp_per_capita_usd": 3984.8315387656,
+      "school_enrollment_secondary_pct": 85.2945085684493,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PL": {
+      "code": "PL",
+      "name": "Poland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Warsaw",
+      "population": null,
+      "languages": [],
+      "latitude": 52.26,
+      "longitude": 21.02,
+      "life_expectancy": 78.409756097561,
+      "gdp_per_capita_usd": 25103.565661423,
+      "school_enrollment_secondary_pct": 107.881309509277,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PT": {
+      "code": "PT",
+      "name": "Portugal",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Lisbon",
+      "population": null,
+      "languages": [],
+      "latitude": 38.7072,
+      "longitude": -9.13552,
+      "life_expectancy": 82.3829268292683,
+      "gdp_per_capita_usd": 29292.242104753,
+      "school_enrollment_secondary_pct": 120.347076416016,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "PR": {
+      "code": "PR",
+      "name": "Puerto Rico (US)",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "San Juan",
+      "population": null,
+      "languages": [],
+      "latitude": 18.23,
+      "longitude": -66.0,
+      "life_expectancy": 81.902,
+      "gdp_per_capita_usd": 39343.7154660139,
+      "school_enrollment_secondary_pct": 81.4824139700154,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "QA": {
+      "code": "QA",
+      "name": "Qatar",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Doha",
+      "population": null,
+      "languages": [],
+      "latitude": 25.2948,
+      "longitude": 51.5082,
+      "life_expectancy": 82.522,
+      "gdp_per_capita_usd": 76688.6941743178,
+      "school_enrollment_secondary_pct": 99.578857421875,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "RO": {
+      "code": "RO",
+      "name": "Romania",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Bucharest",
+      "population": null,
+      "languages": [],
+      "latitude": 44.4479,
+      "longitude": 26.0979,
+      "life_expectancy": 76.4585365853659,
+      "gdp_per_capita_usd": 20080.2096215595,
+      "school_enrollment_secondary_pct": 81.6316070556641,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "RU": {
+      "code": "RU",
+      "name": "Russian Federation",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Moscow",
+      "population": null,
+      "languages": [],
+      "latitude": 55.7558,
+      "longitude": 37.6176,
+      "life_expectancy": 73.4404878048781,
+      "gdp_per_capita_usd": 14889.0185546875,
+      "school_enrollment_secondary_pct": 92.4840470838527,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "RW": {
+      "code": "RW",
+      "name": "Rwanda",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Kigali",
+      "population": null,
+      "languages": [],
+      "latitude": -1.95325,
+      "longitude": 30.0587,
+      "life_expectancy": 68.017,
+      "gdp_per_capita_usd": 999.65456165547,
+      "school_enrollment_secondary_pct": 48.790277194547,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "WS": {
+      "code": "WS",
+      "name": "Samoa",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Apia",
+      "population": null,
+      "languages": [],
+      "latitude": -13.8314,
+      "longitude": -171.752,
+      "life_expectancy": 71.826,
+      "gdp_per_capita_usd": 5392.87761915762,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SM": {
+      "code": "SM",
+      "name": "San Marino",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "San Marino",
+      "population": null,
+      "languages": [],
+      "latitude": 43.9322,
+      "longitude": 12.4486,
+      "life_expectancy": 85.817,
+      "gdp_per_capita_usd": 59879.7173015651,
+      "school_enrollment_secondary_pct": 60.3746397694525,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ST": {
+      "code": "ST",
+      "name": "Sao Tome and Principe",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Sao Tome",
+      "population": null,
+      "languages": [],
+      "latitude": 0.20618,
+      "longitude": 6.6071,
+      "life_expectancy": 69.905,
+      "gdp_per_capita_usd": 3490.56883486557,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SA": {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Riyadh",
+      "population": null,
+      "languages": [],
+      "latitude": 24.6748,
+      "longitude": 46.6977,
+      "life_expectancy": 78.982,
+      "gdp_per_capita_usd": 35121.6628687742,
+      "school_enrollment_secondary_pct": 110.66346516974,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SN": {
+      "code": "SN",
+      "name": "Senegal",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Dakar",
+      "population": null,
+      "languages": [],
+      "latitude": 14.7247,
+      "longitude": -17.4734,
+      "life_expectancy": 68.924,
+      "gdp_per_capita_usd": 1773.21829923448,
+      "school_enrollment_secondary_pct": 44.0673682244069,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "RS": {
+      "code": "RS",
+      "name": "Serbia",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Belgrade",
+      "population": null,
+      "languages": [],
+      "latitude": 44.8024,
+      "longitude": 20.4656,
+      "life_expectancy": 75.9682926829268,
+      "gdp_per_capita_usd": 13679.2065983557,
+      "school_enrollment_secondary_pct": 89.8402786254883,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SC": {
+      "code": "SC",
+      "name": "Seychelles",
+      "region": "Sub-Saharan Africa",
+      "subregion": null,
+      "capital": "Victoria",
+      "population": null,
+      "languages": [],
+      "latitude": -4.6309,
+      "longitude": 55.4466,
+      "life_expectancy": 76.2951219512195,
+      "gdp_per_capita_usd": 17858.8226383978,
+      "school_enrollment_secondary_pct": 70.824577331543,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SL": {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Freetown",
+      "population": null,
+      "languages": [],
+      "latitude": 8.4821,
+      "longitude": -13.2134,
+      "life_expectancy": 61.964,
+      "gdp_per_capita_usd": 806.654650417726,
+      "school_enrollment_secondary_pct": 86.9079513549805,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SG": {
+      "code": "SG",
+      "name": "Singapore",
+      "region": "East Asia & Pacific",
+      "subregion": null,
+      "capital": "Singapore",
+      "population": null,
+      "languages": [],
+      "latitude": 1.28941,
+      "longitude": 103.85,
+      "life_expectancy": 83.3463414634146,
+      "gdp_per_capita_usd": 90674.066632628,
+      "school_enrollment_secondary_pct": 103.082801906213,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SX": {
+      "code": "SX",
+      "name": "Sint Maarten (Dutch part)",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Philipsburg",
+      "population": null,
+      "languages": [],
+      "latitude": null,
+      "longitude": null,
+      "life_expectancy": 76.528,
+      "gdp_per_capita_usd": 41472.5874498583,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SK": {
+      "code": "SK",
+      "name": "Slovak Republic",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Bratislava",
+      "population": null,
+      "languages": [],
+      "latitude": 48.1484,
+      "longitude": 17.1073,
+      "life_expectancy": 78.3707317073171,
+      "gdp_per_capita_usd": 25992.6748502048,
+      "school_enrollment_secondary_pct": 93.1929931640625,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SI": {
+      "code": "SI",
+      "name": "Slovenia",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Ljubljana",
+      "population": null,
+      "languages": [],
+      "latitude": 46.0546,
+      "longitude": 14.5044,
+      "life_expectancy": 82.2853658536585,
+      "gdp_per_capita_usd": 34301.0318686594,
+      "school_enrollment_secondary_pct": 107.626876831055,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SB": {
+      "code": "SB",
+      "name": "Solomon Islands",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Honiara",
+      "population": null,
+      "languages": [],
+      "latitude": -9.42676,
+      "longitude": 159.949,
+      "life_expectancy": 70.694,
+      "gdp_per_capita_usd": 1933.55538435227,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SO": {
+      "code": "SO",
+      "name": "Somalia, Fed. Rep.",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Mogadishu",
+      "population": null,
+      "languages": [],
+      "latitude": 2.07515,
+      "longitude": 45.3254,
+      "life_expectancy": 58.967,
+      "gdp_per_capita_usd": 629.538899449007,
+      "school_enrollment_secondary_pct": 3.34785008430481,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ZA": {
+      "code": "ZA",
+      "name": "South Africa",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Pretoria",
+      "population": null,
+      "languages": [],
+      "latitude": -25.746,
+      "longitude": 28.1871,
+      "life_expectancy": 66.312,
+      "gdp_per_capita_usd": 6267.186814093,
+      "school_enrollment_secondary_pct": 104.133480684239,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SS": {
+      "code": "SS",
+      "name": "South Sudan",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Juba",
+      "population": null,
+      "languages": [],
+      "latitude": 4.85,
+      "longitude": 31.6,
+      "life_expectancy": 57.738,
+      "gdp_per_capita_usd": null,
+      "school_enrollment_secondary_pct": 122.120628356934,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ES": {
+      "code": "ES",
+      "name": "Spain",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Madrid",
+      "population": null,
+      "languages": [],
+      "latitude": 40.4167,
+      "longitude": -3.70327,
+      "life_expectancy": 83.8878048780488,
+      "gdp_per_capita_usd": 35326.7683069278,
+      "school_enrollment_secondary_pct": 118.537803649902,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LK": {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "region": "South Asia",
+      "subregion": "South Asia",
+      "capital": "Colombo",
+      "population": null,
+      "languages": [],
+      "latitude": 6.92148,
+      "longitude": 79.8528,
+      "life_expectancy": 77.672,
+      "gdp_per_capita_usd": 4515.56787322732,
+      "school_enrollment_secondary_pct": 87.9534065332114,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "KN": {
+      "code": "KN",
+      "name": "St. Kitts and Nevis",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Basseterre",
+      "population": null,
+      "languages": [],
+      "latitude": 17.3,
+      "longitude": -62.7309,
+      "life_expectancy": 72.281,
+      "gdp_per_capita_usd": 23960.6534357084,
+      "school_enrollment_secondary_pct": 137.513208876365,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "LC": {
+      "code": "LC",
+      "name": "St. Lucia",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Castries",
+      "population": null,
+      "languages": [],
+      "latitude": 14.0,
+      "longitude": -60.9832,
+      "life_expectancy": 72.846,
+      "gdp_per_capita_usd": 14181.6303351598,
+      "school_enrollment_secondary_pct": 87.8672424011515,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "MF": {
+      "code": "MF",
+      "name": "St. Martin (French part)",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Marigot",
+      "population": null,
+      "languages": [],
+      "latitude": null,
+      "longitude": null,
+      "life_expectancy": 80.438,
+      "gdp_per_capita_usd": 21668.3776525323,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VC": {
+      "code": "VC",
+      "name": "St. Vincent and the Grenadines",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Kingstown",
+      "population": null,
+      "languages": [],
+      "latitude": 13.2035,
+      "longitude": -61.2653,
+      "life_expectancy": 71.382,
+      "gdp_per_capita_usd": 11501.2265187188,
+      "school_enrollment_secondary_pct": 124.871794871795,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SD": {
+      "code": "SD",
+      "name": "Sudan",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Khartoum",
+      "population": null,
+      "languages": [],
+      "latitude": 15.5932,
+      "longitude": 32.5363,
+      "life_expectancy": 66.521,
+      "gdp_per_capita_usd": 984.607666015625,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SR": {
+      "code": "SR",
+      "name": "Suriname",
+      "region": "Latin America & Caribbean",
+      "subregion": "Latin America & Caribbean (excluding high income)",
+      "capital": "Paramaribo",
+      "population": null,
+      "languages": [],
+      "latitude": 5.8232,
+      "longitude": -55.1679,
+      "life_expectancy": 73.757,
+      "gdp_per_capita_usd": 6961.78955961526,
+      "school_enrollment_secondary_pct": 76.1109237670898,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SE": {
+      "code": "SE",
+      "name": "Sweden",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Stockholm",
+      "population": null,
+      "languages": [],
+      "latitude": 59.3327,
+      "longitude": 18.0645,
+      "life_expectancy": 84.0634146341463,
+      "gdp_per_capita_usd": 57117.4877440616,
+      "school_enrollment_secondary_pct": 131.96354675293,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "CH": {
+      "code": "CH",
+      "name": "Switzerland",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "Bern",
+      "population": null,
+      "languages": [],
+      "latitude": 46.948,
+      "longitude": 7.44821,
+      "life_expectancy": 84.4073170731707,
+      "gdp_per_capita_usd": 103998.186685604,
+      "school_enrollment_secondary_pct": 101.4287109375,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "SY": {
+      "code": "SY",
+      "name": "Syrian Arab Republic",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Damascus",
+      "population": null,
+      "languages": [],
+      "latitude": 33.5146,
+      "longitude": 36.3119,
+      "life_expectancy": 72.56,
+      "gdp_per_capita_usd": 1051.67149587463,
+      "school_enrollment_secondary_pct": 38.736930847168,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TJ": {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Dushanbe",
+      "population": null,
+      "languages": [],
+      "latitude": 38.5878,
+      "longitude": 68.7864,
+      "life_expectancy": 71.927,
+      "gdp_per_capita_usd": 1341.20229027672,
+      "school_enrollment_secondary_pct": 86.9035257819264,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TZ": {
+      "code": "TZ",
+      "name": "Tanzania",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Dodoma",
+      "population": null,
+      "languages": [],
+      "latitude": -6.17486,
+      "longitude": 35.7382,
+      "life_expectancy": 67.212,
+      "gdp_per_capita_usd": 1186.71691894531,
+      "school_enrollment_secondary_pct": 28.231330871582,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TH": {
+      "code": "TH",
+      "name": "Thailand",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Bangkok",
+      "population": null,
+      "languages": [],
+      "latitude": 13.7308,
+      "longitude": 100.521,
+      "life_expectancy": 76.564,
+      "gdp_per_capita_usd": 7346.62022142185,
+      "school_enrollment_secondary_pct": 92.507325535959,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TL": {
+      "code": "TL",
+      "name": "Timor-Leste",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Dili",
+      "population": null,
+      "languages": [],
+      "latitude": -8.56667,
+      "longitude": 125.567,
+      "life_expectancy": 67.904,
+      "gdp_per_capita_usd": 1331.9705130185,
+      "school_enrollment_secondary_pct": 84.7410404382553,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TG": {
+      "code": "TG",
+      "name": "Togo",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Lome",
+      "population": null,
+      "languages": [],
+      "latitude": 6.1228,
+      "longitude": 1.2255,
+      "life_expectancy": 62.935,
+      "gdp_per_capita_usd": 1119.38160509429,
+      "school_enrollment_secondary_pct": 63.4192515229188,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TO": {
+      "code": "TO",
+      "name": "Tonga",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Nuku'alofa",
+      "population": null,
+      "languages": [],
+      "latitude": -21.136,
+      "longitude": -175.216,
+      "life_expectancy": 73.07,
+      "gdp_per_capita_usd": 5651.59373063157,
+      "school_enrollment_secondary_pct": 92.4258049730721,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TT": {
+      "code": "TT",
+      "name": "Trinidad and Tobago",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Port-of-Spain",
+      "population": null,
+      "languages": [],
+      "latitude": 10.6596,
+      "longitude": -61.4789,
+      "life_expectancy": 73.617,
+      "gdp_per_capita_usd": 18733.4110406494,
+      "school_enrollment_secondary_pct": 95.6815649255588,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TN": {
+      "code": "TN",
+      "name": "Tunisia",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Tunis",
+      "population": null,
+      "languages": [],
+      "latitude": 36.7899,
+      "longitude": 10.21,
+      "life_expectancy": 76.711,
+      "gdp_per_capita_usd": 4181.13789301228,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TR": {
+      "code": "TR",
+      "name": "Turkiye",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Ankara",
+      "population": null,
+      "languages": [],
+      "latitude": 39.7153,
+      "longitude": 32.3606,
+      "life_expectancy": 77.421,
+      "gdp_per_capita_usd": 15892.7157287241,
+      "school_enrollment_secondary_pct": 118.411979675293,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TM": {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Ashgabat",
+      "population": null,
+      "languages": [],
+      "latitude": 37.9509,
+      "longitude": 58.3794,
+      "life_expectancy": 70.201,
+      "gdp_per_capita_usd": 6856.65802730208,
+      "school_enrollment_secondary_pct": 94.6464126735365,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TC": {
+      "code": "TC",
+      "name": "Turks and Caicos Islands",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Grand Turk",
+      "population": null,
+      "languages": [],
+      "latitude": 21.4602778,
+      "longitude": -71.141389,
+      "life_expectancy": 78.181,
+      "gdp_per_capita_usd": 37506.7798431288,
+      "school_enrollment_secondary_pct": 119.728975687525,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "TV": {
+      "code": "TV",
+      "name": "Tuvalu",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Funafuti",
+      "population": null,
+      "languages": [],
+      "latitude": -8.6314877,
+      "longitude": 179.089567,
+      "life_expectancy": 67.259,
+      "gdp_per_capita_usd": 6344.7750188689,
+      "school_enrollment_secondary_pct": 90.6571654790182,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "UG": {
+      "code": "UG",
+      "name": "Uganda",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Kampala",
+      "population": null,
+      "languages": [],
+      "latitude": 0.314269,
+      "longitude": 32.5729,
+      "life_expectancy": 68.487,
+      "gdp_per_capita_usd": 1077.91278452817,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "UA": {
+      "code": "UA",
+      "name": "Ukraine",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Kiev",
+      "population": null,
+      "languages": [],
+      "latitude": 50.4536,
+      "longitude": 30.5038,
+      "life_expectancy": 74.692,
+      "gdp_per_capita_usd": 5389.47314453125,
+      "school_enrollment_secondary_pct": 86.1695022583008,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "AE": {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": null,
+      "capital": "Abu Dhabi",
+      "population": null,
+      "languages": [],
+      "latitude": 24.4764,
+      "longitude": 54.3705,
+      "life_expectancy": 83.069,
+      "gdp_per_capita_usd": 50273.5060469837,
+      "school_enrollment_secondary_pct": 102.129724902444,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "GB": {
+      "code": "GB",
+      "name": "United Kingdom",
+      "region": "Europe & Central Asia",
+      "subregion": null,
+      "capital": "London",
+      "population": null,
+      "languages": [],
+      "latitude": 51.5002,
+      "longitude": -0.126236,
+      "life_expectancy": 81.3868536585366,
+      "gdp_per_capita_usd": 53246.3676145108,
+      "school_enrollment_secondary_pct": 112.120048522949,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "US": {
+      "code": "US",
+      "name": "United States",
+      "region": "North America",
+      "subregion": null,
+      "capital": "Washington D.C.",
+      "population": null,
+      "languages": [],
+      "latitude": 38.8895,
+      "longitude": -77.032,
+      "life_expectancy": 78.890243902439,
+      "gdp_per_capita_usd": 84534.0407841548,
+      "school_enrollment_secondary_pct": 97.4734878540039,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "UY": {
+      "code": "UY",
+      "name": "Uruguay",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Montevideo",
+      "population": null,
+      "languages": [],
+      "latitude": -34.8941,
+      "longitude": -56.0675,
+      "life_expectancy": 78.287,
+      "gdp_per_capita_usd": 23906.5133029408,
+      "school_enrollment_secondary_pct": 119.105005958635,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "UZ": {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "region": "Europe & Central Asia",
+      "subregion": "Europe & Central Asia (excluding high income)",
+      "capital": "Tashkent",
+      "population": null,
+      "languages": [],
+      "latitude": 41.3052,
+      "longitude": 69.269,
+      "life_expectancy": 72.528,
+      "gdp_per_capita_usd": 3161.70010632875,
+      "school_enrollment_secondary_pct": 96.8399222342106,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VU": {
+      "code": "VU",
+      "name": "Vanuatu",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Port-Vila",
+      "population": null,
+      "languages": [],
+      "latitude": -17.7404,
+      "longitude": 168.321,
+      "life_expectancy": 71.654,
+      "gdp_per_capita_usd": 3410.77023167097,
+      "school_enrollment_secondary_pct": 134.670675170038,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VE": {
+      "code": "VE",
+      "name": "Venezuela, RB",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Caracas",
+      "population": null,
+      "languages": [],
+      "latitude": 9.08165,
+      "longitude": -69.8371,
+      "life_expectancy": 72.673,
+      "gdp_per_capita_usd": 4217.59102643391,
+      "school_enrollment_secondary_pct": 97.7908172607422,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VN": {
+      "code": "VN",
+      "name": "Viet Nam",
+      "region": "East Asia & Pacific",
+      "subregion": "East Asia & Pacific (excluding high income)",
+      "capital": "Hanoi",
+      "population": null,
+      "languages": [],
+      "latitude": 21.0069,
+      "longitude": 105.825,
+      "life_expectancy": 74.736,
+      "gdp_per_capita_usd": 4717.29028732449,
+      "school_enrollment_secondary_pct": 93.4123434096522,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "VI": {
+      "code": "VI",
+      "name": "Virgin Islands (U.S.)",
+      "region": "Latin America & Caribbean",
+      "subregion": null,
+      "capital": "Charlotte Amalie",
+      "population": null,
+      "languages": [],
+      "latitude": 18.3358,
+      "longitude": -64.8963,
+      "life_expectancy": 80.7707317073171,
+      "gdp_per_capita_usd": 44320.909185774,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "YE": {
+      "code": "YE",
+      "name": "Yemen, Rep.",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "subregion": "Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",
+      "capital": "Sana'a",
+      "population": null,
+      "languages": [],
+      "latitude": 15.352,
+      "longitude": 44.2075,
+      "life_expectancy": 69.439,
+      "gdp_per_capita_usd": null,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ZM": {
+      "code": "ZM",
+      "name": "Zambia",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Lusaka",
+      "population": null,
+      "languages": [],
+      "latitude": -15.3982,
+      "longitude": 28.2937,
+      "life_expectancy": 66.528,
+      "gdp_per_capita_usd": 1187.10943350064,
+      "school_enrollment_secondary_pct": 56.7889289855957,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
+    },
+    "ZW": {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "region": "Sub-Saharan Africa",
+      "subregion": "Sub-Saharan Africa (excluding high income)",
+      "capital": "Harare",
+      "population": null,
+      "languages": [],
+      "latitude": -17.8312,
+      "longitude": 31.0672,
+      "life_expectancy": 63.064,
+      "gdp_per_capita_usd": 2497.20332208763,
+      "school_enrollment_secondary_pct": null,
+      "ethnicity": [
+        {
+          "group": "Mixed/Other",
+          "share": 100.0,
+          "note": "Detailed breakdown unavailable"
+        }
+      ],
+      "weather_description": "Refresh via cron or country detail fetch"
     }
   }
 }

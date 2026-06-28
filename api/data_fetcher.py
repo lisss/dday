@@ -82,6 +82,11 @@ ETHNICITY_BY_COUNTRY: dict[str, list[dict[str, str | float]]] = {
 }
 
 
+def all_country_codes() -> list[str]:
+    cache = storage.load_cache()
+    return sorted(cache.get("countries", {}).keys())
+
+
 async def _fetch_wb_indicator(
     client: httpx.AsyncClient, country_code: str, indicator: str
 ) -> float | None:
@@ -102,6 +107,31 @@ async def _fetch_wb_indicator(
     return None
 
 
+async def _fetch_wb_country_meta(
+    client: httpx.AsyncClient, country_code: str
+) -> dict[str, Any]:
+    url = f"{WORLD_BANK_BASE}/{country_code}"
+    params = {"format": "json"}
+    try:
+        resp = await client.get(url, params=params, timeout=20.0)
+        resp.raise_for_status()
+        payload = resp.json()
+        if isinstance(payload, list) and len(payload) > 1 and payload[1]:
+            row = payload[1][0]
+            lat = row.get("latitude")
+            lon = row.get("longitude")
+            return {
+                "name": row.get("name", country_code),
+                "region": (row.get("region") or {}).get("value"),
+                "subregion": (row.get("adminregion") or {}).get("value"),
+                "capital": row.get("capitalCity"),
+                "latlng": [float(lat), float(lon)] if lat and lon else [None, None],
+            }
+    except (httpx.HTTPError, ValueError, TypeError):
+        pass
+    return {}
+
+
 async def _fetch_rest_country(
     client: httpx.AsyncClient, country_code: str
 ) -> dict[str, Any]:
@@ -111,6 +141,8 @@ async def _fetch_rest_country(
         resp = await client.get(url, params=params, timeout=20.0)
         resp.raise_for_status()
         data = resp.json()
+        if isinstance(data, dict) and data.get("success") is False:
+            return {}
         if isinstance(data, list) and data:
             return data[0]
     except httpx.HTTPError:
@@ -164,38 +196,53 @@ def _weather_label(code: int | None) -> str:
 
 async def fetch_country_data(country_code: str) -> dict[str, Any]:
     code = country_code.upper()
+    seed = storage.get_country(code) or {}
+
     async with httpx.AsyncClient() as client:
         rest_task = _fetch_rest_country(client, code)
+        wb_meta_task = _fetch_wb_country_meta(client, code)
         life_task = _fetch_wb_indicator(client, code, WB_INDICATORS["life_expectancy"])
         gdp_task = _fetch_wb_indicator(client, code, WB_INDICATORS["gdp_per_capita"])
         edu_task = _fetch_wb_indicator(client, code, WB_INDICATORS["school_enrollment"])
 
-        rest, life_exp, gdp, edu = await asyncio.gather(
-            rest_task, life_task, gdp_task, edu_task
+        rest, wb_meta, life_exp, gdp, edu = await asyncio.gather(
+            rest_task, wb_meta_task, life_task, gdp_task, edu_task
         )
 
-        latlng = rest.get("latlng") or [None, None]
+        meta = wb_meta if wb_meta else rest
+        latlng = meta.get("latlng") or seed.get("latlng")
+        if not latlng and seed.get("latitude") is not None:
+            latlng = [seed.get("latitude"), seed.get("longitude")]
+        if not latlng:
+            latlng = [None, None]
+
         weather = None
         if latlng[0] is not None and latlng[1] is not None:
             weather = await _fetch_weather(client, latlng[0], latlng[1])
 
-    name = rest.get("name", {}).get("common", code)
+    name = meta.get("name") or seed.get("name") or rest.get("name", {}).get("common", code)
+    if isinstance(name, dict):
+        name = name.get("common", code)
+
     ethnicity = ETHNICITY_BY_COUNTRY.get(
         code,
-        [{"group": "Mixed/Other", "share": 100.0, "note": "Detailed breakdown unavailable"}],
+        seed.get("ethnicity")
+        or [{"group": "Mixed/Other", "share": 100.0, "note": "Detailed breakdown unavailable"}],
     )
 
     result: dict[str, Any] = {
         "code": code,
         "name": name,
-        "region": rest.get("region"),
-        "subregion": rest.get("subregion"),
-        "capital": (rest.get("capital") or [None])[0],
-        "population": rest.get("population"),
-        "languages": list((rest.get("languages") or {}).values()),
-        "life_expectancy": life_exp,
-        "gdp_per_capita_usd": gdp,
-        "school_enrollment_secondary_pct": edu,
+        "region": meta.get("region") or seed.get("region"),
+        "subregion": meta.get("subregion") or seed.get("subregion"),
+        "capital": meta.get("capital") or seed.get("capital") or (rest.get("capital") or [None])[0],
+        "population": rest.get("population") or seed.get("population"),
+        "languages": list((rest.get("languages") or {}).values()) or seed.get("languages", []),
+        "life_expectancy": life_exp or seed.get("life_expectancy"),
+        "gdp_per_capita_usd": gdp if gdp is not None else seed.get("gdp_per_capita_usd"),
+        "school_enrollment_secondary_pct": edu if edu is not None else seed.get(
+            "school_enrollment_secondary_pct"
+        ),
         "ethnicity": ethnicity,
         "weather": weather,
         "weather_description": _weather_label(
@@ -206,27 +253,27 @@ async def fetch_country_data(country_code: str) -> dict[str, Any]:
     return result
 
 
-DEFAULT_COUNTRY_CODES = [
-    "US", "GB", "DE", "FR", "JP", "CN", "IN", "BR", "NG", "AU",
-    "CA", "MX", "IT", "ES", "KR", "RU", "ZA", "SE", "NO", "NL",
-]
-
-
 async def refresh_all_countries(codes: list[str] | None = None) -> dict[str, Any]:
-    targets = codes or DEFAULT_COUNTRY_CODES
+    targets = codes or all_country_codes()
     results: dict[str, Any] = {}
     errors: dict[str, str] = {}
 
-    for code in targets:
-        try:
-            results[code] = await fetch_country_data(code)
-        except Exception as exc:  # noqa: BLE001
-            errors[code] = str(exc)
+    batch_size = 15
+    for i in range(0, len(targets), batch_size):
+        batch = targets[i : i + batch_size]
+        tasks = [fetch_country_data(code) for code in batch]
+        batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+        for code, outcome in zip(batch, batch_results):
+            if isinstance(outcome, Exception):
+                errors[code] = str(outcome)
+            else:
+                results[code] = outcome
 
     cache = storage.load_cache()
     return {
         "updated_at": cache.get("updated_at"),
         "fetched": len(results),
+        "total": len(targets),
         "errors": errors,
         "countries": list(results.keys()),
     }

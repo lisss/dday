@@ -26,14 +26,36 @@ export interface CountryDetail {
   weather_description?: string;
 }
 
+export type ActivityType =
+  | "running"
+  | "gym"
+  | "tennis"
+  | "cycling"
+  | "swimming"
+  | "walking"
+  | "yoga"
+  | "team_sports";
+
+export interface ActivityOption {
+  type: ActivityType;
+  label: string;
+}
+
+export interface ActivityEntry {
+  type: ActivityType;
+  hours_per_week: number;
+}
+
 export interface PredictRequest {
   birth_date: string;
   gender: "male" | "female" | "other";
   country_code: string;
   education: "none" | "primary" | "secondary" | "tertiary";
   income_level: "low" | "average" | "high";
-  activity_level: "sedentary" | "moderate" | "active";
   smoking: "never" | "former" | "current";
+  alcohol: "none" | "light" | "moderate" | "heavy";
+  reading_hours_per_week: number;
+  activities: ActivityEntry[];
   ethnicity_group?: string;
 }
 
@@ -63,12 +85,16 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export function fetchCountries(): Promise<{ countries: CountrySummary[] }> {
+export function fetchCountries(): Promise<{ countries: CountrySummary[]; updated_at?: string }> {
   return request("/countries");
 }
 
 export function fetchCountry(code: string): Promise<CountryDetail> {
   return request(`/countries/${code}`);
+}
+
+export function fetchActivityOptions(): Promise<{ activities: ActivityOption[] }> {
+  return request("/activities");
 }
 
 export function predictDeath(body: PredictRequest): Promise<PredictResponse> {

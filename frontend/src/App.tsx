@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import {
+  ActivityOption,
+  ActivityType,
   CountryDetail,
   CountrySummary,
   PredictRequest,
   PredictResponse,
+  fetchActivityOptions,
   fetchCountries,
   fetchCountry,
   predictDeath,
@@ -13,20 +16,37 @@ type FormState = {
   birthDate: string;
   gender: PredictRequest["gender"];
   countryCode: string;
+  countrySearch: string;
   education: PredictRequest["education"];
   incomeLevel: PredictRequest["income_level"];
-  activityLevel: PredictRequest["activity_level"];
   smoking: PredictRequest["smoking"];
+  alcohol: PredictRequest["alcohol"];
+  readingHoursPerWeek: number;
+  activityHours: Record<ActivityType, number>;
 };
+
+const EMPTY_ACTIVITY_HOURS = (): Record<ActivityType, number> => ({
+  running: 0,
+  gym: 0,
+  tennis: 0,
+  cycling: 0,
+  swimming: 0,
+  walking: 0,
+  yoga: 0,
+  team_sports: 0,
+});
 
 const initialForm: FormState = {
   birthDate: "1990-01-01",
   gender: "other",
   countryCode: "US",
+  countrySearch: "",
   education: "secondary",
   incomeLevel: "average",
-  activityLevel: "moderate",
   smoking: "never",
+  alcohol: "none",
+  readingHoursPerWeek: 3,
+  activityHours: EMPTY_ACTIVITY_HOURS(),
 };
 
 function formatDate(iso: string): string {
@@ -116,6 +136,7 @@ function Countdown({ targetDate }: { targetDate: string }) {
 
 export default function App() {
   const [countries, setCountries] = useState<CountrySummary[]>([]);
+  const [activityOptions, setActivityOptions] = useState<ActivityOption[]>([]);
   const [form, setForm] = useState<FormState>(initialForm);
   const [countryDetail, setCountryDetail] = useState<CountryDetail | null>(null);
   const [result, setResult] = useState<PredictResponse | null>(null);
@@ -126,6 +147,9 @@ export default function App() {
     fetchCountries()
       .then((data) => setCountries(data.countries))
       .catch((err: Error) => setError(err.message));
+    fetchActivityOptions()
+      .then((data) => setActivityOptions(data.activities))
+      .catch(() => setActivityOptions([]));
   }, []);
 
   useEffect(() => {
@@ -135,9 +159,36 @@ export default function App() {
       .catch(() => setCountryDetail(null));
   }, [form.countryCode]);
 
+  const filteredCountries = useMemo(() => {
+    const q = form.countrySearch.trim().toLowerCase();
+    if (!q) return countries;
+    return countries.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.code.toLowerCase().includes(q) ||
+        (c.region ?? "").toLowerCase().includes(q),
+    );
+  }, [countries, form.countrySearch]);
+
+  const countriesByRegion = useMemo(() => {
+    const groups = new Map<string, CountrySummary[]>();
+    for (const country of filteredCountries) {
+      const region = country.region ?? "Other";
+      const bucket = groups.get(region) ?? [];
+      bucket.push(country);
+      groups.set(region, bucket);
+    }
+    return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b));
+  }, [filteredCountries]);
+
   const selectedCountry = useMemo(
     () => countries.find((c) => c.code === form.countryCode),
     [countries, form.countryCode],
+  );
+
+  const weeklyActivityTotal = useMemo(
+    () => Object.values(form.activityHours).reduce((sum, hrs) => sum + hrs, 0),
+    [form.activityHours],
   );
 
   async function handleSubmit(e: React.FormEvent) {
@@ -145,14 +196,20 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
+      const activities = (Object.entries(form.activityHours) as [ActivityType, number][])
+        .filter(([, hours]) => hours > 0)
+        .map(([type, hours_per_week]) => ({ type, hours_per_week }));
+
       const payload: PredictRequest = {
         birth_date: form.birthDate,
         gender: form.gender,
         country_code: form.countryCode,
         education: form.education,
         income_level: form.incomeLevel,
-        activity_level: form.activityLevel,
         smoking: form.smoking,
+        alcohol: form.alcohol,
+        reading_hours_per_week: form.readingHoursPerWeek,
+        activities,
       };
       const prediction = await predictDeath(payload);
       setResult(prediction);
@@ -167,14 +224,25 @@ export default function App() {
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
+  function updateActivityHours(type: ActivityType, hours: number) {
+    setForm((prev) => ({
+      ...prev,
+      activityHours: {
+        ...prev.activityHours,
+        [type]: Math.min(40, Math.max(0, hours)),
+      },
+    }));
+  }
+
   return (
     <div className="page">
       <header className="hero">
         <p className="eyebrow">Statistical life estimator</p>
         <h1>When might you die?</h1>
         <p className="subtitle">
-          Uses public data on life expectancy, income, education, ethnicity, and weather
-          by country — then adjusts for your profile.
+          Uses public data on life expectancy, income, education, and weather across{" "}
+          {countries.length > 0 ? `${countries.length} countries` : "the world"} — then
+          adjusts for your lifestyle.
         </p>
       </header>
 
@@ -204,16 +272,31 @@ export default function App() {
               </select>
             </label>
 
-            <label>
+            <label className="wide">
+              Search country
+              <input
+                type="search"
+                placeholder="Filter by name, code, or region…"
+                value={form.countrySearch}
+                onChange={(e) => update("countrySearch", e.target.value)}
+              />
+            </label>
+
+            <label className="wide">
               Country
               <select
                 value={form.countryCode}
                 onChange={(e) => update("countryCode", e.target.value)}
               >
-                {countries.map((c) => (
-                  <option key={c.code} value={c.code}>
-                    {c.name} ({c.code})
-                  </option>
+                {countriesByRegion.map(([region, list]) => (
+                  <optgroup key={region} label={region}>
+                    {list.map((c) => (
+                      <option key={c.code} value={c.code}>
+                        {c.name} ({c.code})
+                        {c.life_expectancy != null ? ` — ${c.life_expectancy} yrs` : ""}
+                      </option>
+                    ))}
+                  </optgroup>
                 ))}
                 {!countries.length && <option value="US">United States (US)</option>}
               </select>
@@ -249,20 +332,6 @@ export default function App() {
             </label>
 
             <label>
-              Physical activity
-              <select
-                value={form.activityLevel}
-                onChange={(e) =>
-                  update("activityLevel", e.target.value as FormState["activityLevel"])
-                }
-              >
-                <option value="sedentary">Sedentary</option>
-                <option value="moderate">Moderate</option>
-                <option value="active">Active</option>
-              </select>
-            </label>
-
-            <label>
               Smoking
               <select
                 value={form.smoking}
@@ -273,6 +342,64 @@ export default function App() {
                 <option value="current">Current smoker</option>
               </select>
             </label>
+
+            <label>
+              Alcohol consumption
+              <select
+                value={form.alcohol}
+                onChange={(e) => update("alcohol", e.target.value as FormState["alcohol"])}
+              >
+                <option value="none">None</option>
+                <option value="light">Light (1–7 drinks/week)</option>
+                <option value="moderate">Moderate (8–14 drinks/week)</option>
+                <option value="heavy">Heavy (15+ drinks/week)</option>
+              </select>
+            </label>
+
+            <label>
+              Reading
+              <input
+                type="number"
+                min={0}
+                max={60}
+                step={0.5}
+                value={form.readingHoursPerWeek}
+                onChange={(e) =>
+                  update("readingHoursPerWeek", Number(e.target.value) || 0)
+                }
+              />
+              <span className="field-hint">hours per week</span>
+            </label>
+
+            <fieldset className="activity-fieldset wide">
+              <legend>
+                Physical activities — hours per week
+                <span className="field-hint"> ({weeklyActivityTotal.toFixed(1)} hrs total)</span>
+              </legend>
+              <div className="activity-grid">
+                {(activityOptions.length
+                  ? activityOptions
+                  : Object.entries(EMPTY_ACTIVITY_HOURS()).map(([type]) => ({
+                      type: type as ActivityType,
+                      label: type,
+                    }))
+                ).map(({ type, label }) => (
+                  <label key={type} className="activity-row">
+                    <span className="activity-label">{label}</span>
+                    <input
+                      type="number"
+                      min={0}
+                      max={40}
+                      step={0.5}
+                      value={form.activityHours[type]}
+                      onChange={(e) =>
+                        updateActivityHours(type, Number(e.target.value) || 0)
+                      }
+                    />
+                  </label>
+                ))}
+              </div>
+            </fieldset>
 
             <button type="submit" disabled={loading} className="submit-btn">
               {loading ? "Calculating…" : "Calculate my estimate"}
@@ -297,6 +424,7 @@ export default function App() {
                     : "—"
                 }
               />
+              <Stat label="Region" value={countryDetail.region ?? "—"} />
               <Stat
                 label="Current weather"
                 value={countryDetail.weather_description ?? "—"}
@@ -348,7 +476,7 @@ export default function App() {
               <ul>
                 {Object.entries(result.factors_applied).map(([key, val]) => (
                   <li key={key}>
-                    {key}: {val > 0 ? "+" : ""}
+                    {key.replace(/_/g, " ")}: {val > 0 ? "+" : ""}
                     {val}
                   </li>
                 ))}

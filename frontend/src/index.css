@@ -88,6 +88,49 @@ label {
   color: var(--muted);
 }
 
+label.wide,
+.activity-fieldset.wide {
+  grid-column: 1 / -1;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.activity-fieldset {
+  margin: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #0d1017;
+}
+
+.activity-fieldset legend {
+  padding: 0 0.35rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.activity-row {
+  display: grid;
+  grid-template-columns: 1fr 4.5rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.activity-label {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
 input,
 select {
   background: #0d1017;

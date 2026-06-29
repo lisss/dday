@@ -19,21 +19,49 @@ vercel.json       Vercel build, rewrites, cron
 requirements.txt  Python dependencies
 ```
 
-## Local development
+## Local development (hot reload)
 
-### 1. Python API (with venv)
+**One command** — starts API + frontend with hot reload:
+
+```bash
+chmod +x scripts/dev.sh   # first time only
+./scripts/dev.sh
+```
+
+- Frontend (Vite HMR): http://localhost:5173
+- API (uvicorn `--reload`): http://127.0.0.1:8000
+
+Edit `frontend/src/*` or `api/*` and changes apply instantly.
+
+### Docker dev (hot reload)
+
+```bash
+docker compose -f docker-compose.dev.yml up
+```
+
+Same URLs. Source folders are mounted into the containers.
+
+### Manual (two terminals)
+
+**Terminal 1 — API**
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-# Run API on http://127.0.0.1:8000
 ./scripts/dev-api.sh
-# or: uvicorn api.index:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### 2. Refresh country data (optional)
+**Terminal 2 — frontend**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Refresh country data (optional)
 
 ```bash
 source venv/bin/activate
@@ -42,15 +70,24 @@ source venv/bin/activate
 
 This fetches data from World Bank, REST Countries, and Open-Meteo, then writes `data/cache.json`.
 
-### 3. Frontend
+### Docker production (no hot reload)
+
+Build and run frontend + API in a single container:
 
 ```bash
-cd frontend
-npm install
-npm run dev
+docker compose up --build
 ```
 
-Open http://localhost:5173 — Vite proxies `/api` to the Python backend.
+Open http://localhost:8080
+
+Or without Compose:
+
+```bash
+docker build -t dday .
+docker run --rm -p 8080:8080 dday
+```
+
+> **Vercel vs Docker:** Vercel does **not** deploy from the Dockerfile. Pushes to GitHub still deploy via `vercel.json` (serverless Python + static frontend). Use Docker for local all-in-one runs or self-hosted hosting.
 
 ## API endpoints
 

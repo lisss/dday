@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 145" role="img" aria-label="RIP tomb with bear and penguin in a cemetery">
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c12"/>
+      <stop offset="60%" stop-color="#12161f"/>
+      <stop offset="100%" stop-color="#1a2218"/>
+    </linearGradient>
+    <linearGradient id="fog" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1a2218" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1a2218" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="grassDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2e1a"/>
+      <stop offset="100%" stop-color="#0f1810"/>
+    </linearGradient>
+    <linearGradient id="stoneFace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a5f68"/>
+      <stop offset="22%" stop-color="#8a8f98"/>
+      <stop offset="50%" stop-color="#6e737c"/>
+      <stop offset="100%" stop-color="#3a3f48"/>
+    </linearGradient>
+    <linearGradient id="stoneEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9a9fa8"/>
+      <stop offset="100%" stop-color="#4a4f58"/>
+    </linearGradient>
+    <linearGradient id="furBrown" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#8a6540"/>
+      <stop offset="100%" stop-color="#4a3420"/>
+    </linearGradient>
+    <linearGradient id="penguinBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a4250"/>
+      <stop offset="100%" stop-color="#141820"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c8d0dc" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c8d0dc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="stoneShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="ripCarve">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.2" flood-color="#000" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- night sky -->
+  <rect width="120" height="145" fill="url(#nightSky)"/>
+
+  <!-- distant cemetery silhouettes -->
+  <g opacity="0.22" fill="#0a0e10">
+    <path d="M8 98 L12 78 L16 98 Z"/>
+    <rect x="10" y="98" width="4" height="14"/>
+    <path d="M22 102 L25 86 L28 102 Z"/>
+    <rect x="23.5" y="102" width="3" height="10"/>
+    <path d="M96 100 L100 82 L104 100 Z"/>
+    <rect x="98" y="100" width="4" height="12"/>
+    <path d="M108 104 L111 90 L114 104 Z"/>
+    <ellipse cx="78" cy="108" rx="14" ry="5"/>
+    <rect x="72" y="98" width="12" height="18" rx="1"/>
+  </g>
+
+  <!-- moon -->
+  <circle cx="92" cy="28" r="10" fill="#b8c2d0" opacity="0.55"/>
+  <circle cx="95" cy="26" r="10" fill="#0a0c12" opacity="0.35"/>
+  <circle cx="92" cy="28" r="22" fill="url(#moonGlow)"/>
+
+  <!-- ground -->
+  <path d="M0 112 L120 112 L120 145 L0 145 Z" fill="url(#grassDark)"/>
+  <ellipse cx="60" cy="112" rx="58" ry="6" fill="#243020" opacity="0.6"/>
+
+  <!-- sparse dark grass -->
+  <g stroke-linecap="round" opacity="0.5">
+    <path d="M6 128 Q8 120 10 129" stroke="#2a3d24" stroke-width="1.1" fill="none"/>
+    <path d="M20 134 Q22 126 24 135" stroke="#324a2a" stroke-width="1" fill="none"/>
+    <path d="M100 132 Q102 124 104 133" stroke="#2a3d24" stroke-width="1.1" fill="none"/>
+    <path d="M112 136 Q114 128 116 137" stroke="#324a2a" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- tomb shadow -->
+  <ellipse cx="60" cy="118" rx="30" ry="4" fill="#000" opacity="0.45"/>
+
+  <!-- tombstone: classic rectangular with flat arch top -->
+  <g filter="url(#stoneShadow)">
+    <!-- main slab -->
+    <path
+      fill="url(#stoneFace)"
+      stroke="#2a2e34"
+      stroke-width="1"
+      d="M36 32 L36 120 L84 120 L84 32 L78 24 L42 24 Z"
+    />
+    <!-- arch top (subtle curve, not oval) -->
+    <path
+      fill="url(#stoneEdge)"
+      d="M42 24 L78 24 C74 18 66 14 60 14 C54 14 46 18 42 24 Z"
+    />
+    <!-- right shade -->
+    <path fill="#2a2e34" opacity="0.35" d="M72 28 L84 32 L84 120 L76 120 L76 30 Z"/>
+    <!-- left highlight -->
+    <path fill="#fff" opacity="0.07" d="M36 36 L40 36 L40 118 L36 118 Z"/>
+    <!-- base plinth -->
+    <rect x="32" y="120" width="56" height="5" rx="0.5" fill="#4a4f58"/>
+    <rect x="32" y="124" width="56" height="2" fill="#2a2e34"/>
+  </g>
+
+  <!-- carved RIP -->
+  <text
+    x="60"
+    y="48"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="20"
+    font-weight="bold"
+    fill="#2a2e34"
+    filter="url(#ripCarve)"
+  >RIP</text>
+  <text
+    x="60"
+    y="48"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="20"
+    font-weight="bold"
+    fill="#8a9098"
+    opacity="0.45"
+  >RIP</text>
+
+  <!-- bear (left) -->
+  <g transform="translate(30, 82)">
+    <circle cx="8" cy="5" r="4" fill="#3a2818"/>
+    <circle cx="20" cy="5" r="4" fill="#3a2818"/>
+    <circle cx="8" cy="5.5" r="2.5" fill="#5c4028"/>
+    <circle cx="20" cy="5.5" r="2.5" fill="#5c4028"/>
+    <circle cx="14" cy="13" r="9.5" fill="url(#furBrown)"/>
+    <circle cx="11" cy="11.5" r="1.6" fill="#0a0806"/>
+    <circle cx="17" cy="11.5" r="1.6" fill="#0a0806"/>
+    <circle cx="11.5" cy="10.8" r="0.5" fill="#ccc" opacity="0.4"/>
+    <circle cx="17.5" cy="10.8" r="0.5" fill="#ccc" opacity="0.4"/>
+    <ellipse cx="14" cy="15.5" rx="5" ry="4" fill="#b8956a"/>
+    <ellipse cx="14" cy="14.5" rx="2.2" ry="1.8" fill="#2a1a10"/>
+    <ellipse cx="14" cy="27" rx="9" ry="8" fill="url(#furBrown)"/>
+    <ellipse cx="14" cy="28.5" rx="4.5" ry="4" fill="#b8956a" opacity="0.35"/>
+    <ellipse cx="22" cy="22" rx="4" ry="2.8" fill="#4a3420" transform="rotate(-16 22 22)"/>
+  </g>
+
+  <!-- penguin (right) -->
+  <g transform="translate(64, 82)">
+    <ellipse cx="9" cy="29" rx="4.5" ry="1.8" fill="#c08020" opacity="0.7"/>
+    <ellipse cx="19" cy="29" rx="4.5" ry="1.8" fill="#c08020" opacity="0.7"/>
+    <ellipse cx="14" cy="24" rx="9" ry="10.5" fill="url(#penguinBody)"/>
+    <ellipse cx="14" cy="25" rx="5" ry="7" fill="#d8dce4"/>
+    <circle cx="14" cy="11" r="8" fill="url(#penguinBody)"/>
+    <ellipse cx="14" cy="12" rx="5" ry="5" fill="#d8dce4"/>
+    <circle cx="11.2" cy="10.2" r="1.5" fill="#0a0c10"/>
+    <circle cx="16.8" cy="10.2" r="1.5" fill="#0a0c10"/>
+    <circle cx="11.6" cy="9.6" r="0.45" fill="#fff" opacity="0.5"/>
+    <circle cx="17.2" cy="9.6" r="0.45" fill="#fff" opacity="0.5"/>
+    <path d="M14 13 L11.8 16 L16.2 16 Z" fill="#c87818"/>
+    <ellipse cx="5.5" cy="21" rx="3" ry="5" fill="#2a3140" transform="rotate(16 5.5 21)"/>
+  </g>
+
+  <!-- paws -->
+  <ellipse cx="51" cy="103" rx="4" ry="2.8" fill="#8a6540" transform="rotate(-10 51 103)"/>
+  <ellipse cx="69" cy="103" rx="4" ry="2.8" fill="#2a3140" transform="rotate(10 69 103)"/>
+
+  <!-- cemetery fog -->
+  <rect width="120" height="145" fill="url(#fog)" opacity="0.5"/>
+</svg>

@@ -16,7 +16,6 @@ type FormState = {
   birthDate: string;
   gender: PredictRequest["gender"];
   countryCode: string;
-  countrySearch: string;
   education: PredictRequest["education"];
   incomeLevel: PredictRequest["income_level"];
   smoking: PredictRequest["smoking"];
@@ -40,7 +39,6 @@ const initialForm: FormState = {
   birthDate: "1990-01-01",
   gender: "other",
   countryCode: "US",
-  countrySearch: "",
   education: "secondary",
   incomeLevel: "average",
   smoking: "never",
@@ -185,6 +183,8 @@ function Countdown({ targetDate }: { targetDate: string }) {
 
 export default function App() {
   const [countries, setCountries] = useState<CountrySummary[]>([]);
+  const [countriesLoading, setCountriesLoading] = useState(true);
+  const [countriesError, setCountriesError] = useState<string | null>(null);
   const [activityOptions, setActivityOptions] = useState<ActivityOption[]>([]);
   const [form, setForm] = useState<FormState>(initialForm);
   const [countryDetail, setCountryDetail] = useState<CountryDetail | null>(null);
@@ -193,9 +193,20 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    setCountriesLoading(true);
+    setCountriesError(null);
     fetchCountries()
-      .then((data) => setCountries(data.countries))
-      .catch((err: Error) => setError(err.message));
+      .then((data) => {
+        setCountries(data.countries);
+        if (data.countries.length > 0) {
+          setForm((prev) => {
+            const hasSelection = data.countries.some((c) => c.code === prev.countryCode);
+            return hasSelection ? prev : { ...prev, countryCode: data.countries[0].code };
+          });
+        }
+      })
+      .catch((err: Error) => setCountriesError(err.message))
+      .finally(() => setCountriesLoading(false));
     fetchActivityOptions()
       .then((data) => setActivityOptions(data.activities))
       .catch(() => setActivityOptions([]));
@@ -208,27 +219,10 @@ export default function App() {
       .catch(() => setCountryDetail(null));
   }, [form.countryCode]);
 
-  const filteredCountries = useMemo(() => {
-    const q = form.countrySearch.trim().toLowerCase();
-    if (!q) return countries;
-    return countries.filter(
-      (c) =>
-        c.name.toLowerCase().includes(q) ||
-        c.code.toLowerCase().includes(q) ||
-        (c.region ?? "").toLowerCase().includes(q),
-    );
-  }, [countries, form.countrySearch]);
-
-  const countriesByRegion = useMemo(() => {
-    const groups = new Map<string, CountrySummary[]>();
-    for (const country of filteredCountries) {
-      const region = country.region ?? "Other";
-      const bucket = groups.get(region) ?? [];
-      bucket.push(country);
-      groups.set(region, bucket);
-    }
-    return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b));
-  }, [filteredCountries]);
+  const sortedCountries = useMemo(
+    () => [...countries].sort((a, b) => a.name.localeCompare(b.name)),
+    [countries],
+  );
 
   const selectedCountry = useMemo(
     () => countries.find((c) => c.code === form.countryCode),
@@ -286,6 +280,13 @@ export default function App() {
   return (
     <div className="page">
       <header className="hero">
+        <div className="hero-banner">
+          <img
+            src="/highgate-headstone.png"
+            alt="Victorian Highgate Cemetery headstone with RIP, bear and penguin"
+            className="hero-banner-img"
+          />
+        </div>
         <p className="eyebrow">Statistical life estimator</p>
         <h1>When might you die?</h1>
         <p className="subtitle">
@@ -322,33 +323,26 @@ export default function App() {
             </label>
 
             <label className="wide">
-              Search country
-              <input
-                type="search"
-                placeholder="Filter by name, code, or region…"
-                value={form.countrySearch}
-                onChange={(e) => update("countrySearch", e.target.value)}
-              />
-            </label>
-
-            <label className="wide">
               Country
               <select
                 value={form.countryCode}
+                disabled={countriesLoading || sortedCountries.length === 0}
                 onChange={(e) => update("countryCode", e.target.value)}
               >
-                {countriesByRegion.map(([region, list]) => (
-                  <optgroup key={region} label={region}>
-                    {list.map((c) => (
-                      <option key={c.code} value={c.code}>
-                        {c.name} ({c.code})
-                        {c.life_expectancy != null ? ` — ${c.life_expectancy} yrs` : ""}
-                      </option>
-                    ))}
-                  </optgroup>
+                {countriesLoading && <option value={form.countryCode}>Loading countries…</option>}
+                {!countriesLoading && sortedCountries.length === 0 && (
+                  <option value="">No countries available</option>
+                )}
+                {sortedCountries.map((c) => (
+                  <option key={c.code} value={c.code}>
+                    {c.name} ({c.code})
+                    {c.life_expectancy != null ? ` — ${c.life_expectancy} yrs` : ""}
+                  </option>
                 ))}
-                {!countries.length && <option value="US">United States (US)</option>}
               </select>
+              {countriesError && (
+                <span className="field-hint error">Failed to load countries: {countriesError}</span>
+              )}
             </label>
 
             <label>

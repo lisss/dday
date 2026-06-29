@@ -34,6 +34,27 @@ body {
   margin-bottom: 2rem;
 }
 
+.hero-banner {
+  width: 100vw;
+  margin: -2.5rem calc(50% - 50vw) 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0c12;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  padding: 0.75rem 0;
+}
+
+.hero-banner-img {
+  display: block;
+  width: min(100%, 960px);
+  height: auto;
+  max-height: min(52vh, 420px);
+  object-fit: contain;
+  object-position: center center;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -43,11 +64,16 @@ body {
 }
 
 h1 {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: "Creepster", system-ui, sans-serif;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
   font-weight: 400;
   margin: 0 0 0.75rem;
   line-height: 1.05;
+  color: var(--danger);
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 0 28px rgba(255, 60, 60, 0.5),
+    0 2px 14px rgba(0, 0, 0, 0.65);
 }
 
 .subtitle {
@@ -96,6 +122,10 @@ label.wide,
 .field-hint {
   font-size: 0.75rem;
   color: var(--muted);
+}
+
+.field-hint.error {
+  color: var(--danger);
 }
 
 .activity-fieldset {

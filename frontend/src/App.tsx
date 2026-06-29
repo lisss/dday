@@ -70,6 +70,55 @@ function pad2(n: number): string {
   return String(n).padStart(2, "0");
 }
 
+function ZeroFriendlyNumberInput({
+  value,
+  onChange,
+  min = 0,
+  max,
+  step = 1,
+}: {
+  value: number;
+  onChange: (value: number) => void;
+  min?: number;
+  max?: number;
+  step?: number;
+}) {
+  function clamp(n: number): number {
+    return Math.min(max ?? Infinity, Math.max(min, n));
+  }
+
+  return (
+    <input
+      type="number"
+      min={min}
+      max={max}
+      step={step}
+      placeholder="0"
+      value={value === 0 ? "" : value}
+      onChange={(e) => {
+        const raw = e.target.value;
+        if (raw === "") {
+          onChange(0);
+          return;
+        }
+        const parsed = Number(raw);
+        if (!Number.isNaN(parsed)) {
+          onChange(clamp(parsed));
+        }
+      }}
+      onBlur={(e) => {
+        const raw = e.target.value;
+        if (raw === "") {
+          onChange(0);
+          return;
+        }
+        const parsed = Number(raw);
+        onChange(Number.isNaN(parsed) ? 0 : clamp(parsed));
+      }}
+    />
+  );
+}
+
 function parseLocalDate(iso: string): Date {
   const [year, month, day] = iso.split("-").map(Number);
   return new Date(year, month - 1, day, 0, 0, 0, 0);
@@ -358,15 +407,12 @@ export default function App() {
 
             <label>
               Reading
-              <input
-                type="number"
+              <ZeroFriendlyNumberInput
                 min={0}
                 max={250}
                 step={1}
                 value={form.readingHoursPerMonth}
-                onChange={(e) =>
-                  update("readingHoursPerMonth", Number(e.target.value) || 0)
-                }
+                onChange={(v) => update("readingHoursPerMonth", v)}
               />
               <span className="field-hint">hours per month</span>
             </label>
@@ -386,15 +432,12 @@ export default function App() {
                 ).map(({ type, label }) => (
                   <label key={type} className="activity-row">
                     <span className="activity-label">{label}</span>
-                    <input
-                      type="number"
+                    <ZeroFriendlyNumberInput
                       min={0}
                       max={40}
                       step={0.5}
                       value={form.activityHours[type]}
-                      onChange={(e) =>
-                        updateActivityHours(type, Number(e.target.value) || 0)
-                      }
+                      onChange={(hours) => updateActivityHours(type, hours)}
                     />
                   </label>
                 ))}

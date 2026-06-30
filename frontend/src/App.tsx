@@ -38,7 +38,7 @@ const EMPTY_ACTIVITY_HOURS = (): Record<ActivityType, number> => ({
 const initialForm: FormState = {
   birthDate: "1990-01-01",
   gender: "other",
-  countryCode: "US",
+  countryCode: "GB",
   education: "secondary",
   incomeLevel: "average",
   smoking: "never",
